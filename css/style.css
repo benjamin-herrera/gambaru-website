@@ -43,8 +43,8 @@ font-family: "Roboto", sans-serif;
 }
 
 .navbar-logo img{
-    width: 5.75rem;
-    height: 5.75rem;
+    width: 6.25rem;
+    height: 6.25rem;
     margin: .3125rem;
     border-radius: 50%;
     object-fit: cover;
@@ -119,13 +119,102 @@ navbar-item a{
 .inicioProductos a{
     background-color: #f4f4f4;
     color: black;
-    font-family: "Aleo", serif;
+    font-family: "Roboto", sans-serif;
     text-decoration: none;
     padding: 10px 20px;
     border-style: solid;
-    border-color: black;
-    border-width: 5px;
+    border-color: white;
+    border-width: .1563rem;
 
+}
+
+
+
+.primerCuerpo{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .625rem;
+    align-items: center;
+}
+
+
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    opacity: 0.75;
+}
+
+.images{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.images img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.segundoCuerpo{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+
+.segundoCuerpo p{
+    margin: 2.1875rem;
+    font-size: 1.2rem;
+    line-height: 1.15;
+    max-height: 85%;
+    overflow-y: auto;
+}
+
+
+.inicioProductos{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.inicioProductos img{
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+
+.inicioProductos .button{
+    position: absolute;
+    bottom: 2.1875rem;
+    display: inline-block;
+    padding: 2.5% 25%;
+    border-radius: 1.5625rem;
+    opacity: 0.75;
+    transition: opacity 0.3s;
+}
+
+.inicioProductos .button:hover{
+    opacity: 1;
 }
 
 
@@ -232,6 +321,56 @@ navbar-item a{
     text-align: center;
 }
 
+
+
+.footerGlobal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.footerGlobal dl{
+    margin-bottom: 1.25rem;
+}
+
+.footerGlobal dl dt{
+    font-weight: bold;
+}
+
+.footerGlobal dl dd{
+    margin: .3125rem 0;
+}
+
+.footerGlobal div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+
+.footerGlobal div p{
+    margin-right: .625rem;
+}
+
+.footerGlobal div img{
+    max-width: 2.1875rem;
+    height: auto;
+    margin-right: .625rem;
+}
+
+.footerGlobal form{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+
+.footerGlobal form label,
+.footerGlobal form input[type="email"],
+.footerGlobal form input[type="sumbit"]{
+    margin-right: .625rem;
+}
 
 
 
