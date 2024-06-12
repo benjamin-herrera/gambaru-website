@@ -373,6 +373,82 @@ font-family: "Roboto", sans-serif;
 }
 
 
+.container{
+    position: relative;
+}
+
+.section-emprendedores{
+    position: relative;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.emprendedorGlobal1, .emprendedorGlobal2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: relative;
+    z-index: 2;
+    gap: 5rem;
+}
+
+.emprendedorGlobal1 img, .emprendedorGlobal2 img{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.emprendedorCuadro1, .emprendedorCuadro2{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    flex: 1;
+    font-family: "Roboto", sans-serif;
+}
+
+.emprendedorGlobal2{
+    flex-direction: row-reverse;
+    gap: 5rem;
+}
+
+.nombreEmprendedor1, .nombreEmprendedor2{
+    font-weight: bold;
+    font-size: xx-large;
+    margin-bottom: 0.5rem;
+}
+
+.sobreEmprendedor1, .sobreEmprendedor2{
+    margin: 0;
+}
+
+.nombreEmprendedor2{
+    text-align: end;
+}
+.emprendedorCuadro1, .emprendedorCuadro2{
+    background-color: #f4f4f4ab;
+    padding: 5rem;
+    border-radius: 3rem;
+    font-size: x-large;
+}
+
+.section-sobre-nosotros{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+}
+
+.section-sobre-nosotros img{
+    width: 33.33%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .campoContacto1{
     background-color: #E3CDAE;
