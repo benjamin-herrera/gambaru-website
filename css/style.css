@@ -14,7 +14,6 @@ font-family: "Roboto", sans-serif;
 
 .header{
     display: flex;
-    padding: .625rem 1.25rem;
     justify-content: space-between;
     align-items: center;
     background-color: #848484;
@@ -634,7 +633,6 @@ iframe{
 @media (max-width: 425px){
     .header{
         display: flex;
-        padding: .625rem 1.25rem;
         justify-content: space-between;
         align-items: center;
         background-color: #848484;
@@ -898,7 +896,6 @@ iframe{
 @media (min-width: 425px) and (max-width: 768px){
     .header{
         display: flex;
-        padding: .625rem 1.25rem;
         justify-content: space-between;
         align-items: center;
         background-color: #848484;
@@ -1160,7 +1157,6 @@ iframe{
 @media (min-width: 769px) and (max-width: 1024px){
     .header{
         display: flex;
-        padding: .625rem 1.25rem;
         justify-content: space-between;
         align-items: center;
         background-color: #848484;
@@ -1426,7 +1422,6 @@ iframe{
     
     .header{
         display: flex;
-        padding: 1.875rem 2.5rem;
         justify-content: space-between;
         align-items: center;
         background-color: #848484;
