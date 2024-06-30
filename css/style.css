@@ -983,6 +983,85 @@ iframe{
     }
 
 
+
+    .clienteGlobal1{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 5rem;
+    }
+    
+    .clienteGlobal1 img{
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 1rem;
+    }
+    
+    .clienteGlobal2{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 5rem;
+    }
+    
+    .clienteGlobal2 img{
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 1rem;
+    }
+    
+    .clienteCuadro{
+        padding: 6rem;
+        border-radius: 5rem;
+        flex: 1;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .nombreCliente{
+        font-weight: bold;
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .clienteGlobal1 {
+        background-color: #BA9D79;
+    }
+    .clienteGlobal2{
+        background-color: #E3CDAE;
+    }
+    .clienteCuadro{
+        background-color: #f4f4f4;
+    }
+    .nombreCliente {
+        color: black;
+        font-family: "Aleo", serif;
+    }
+    .opinionCliente{
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.25rem;
+    }
+
+
+
     .footerGlobal{
         display: flex;
         flex-direction: row;
@@ -1248,6 +1327,85 @@ iframe{
     .inicioProductos .button:hover{
         opacity: 1;
     }
+
+
+
+    .clienteGlobal1{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 5rem;
+    }
+    
+    .clienteGlobal1 img{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 1rem;
+    }
+    
+    .clienteGlobal2{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 5rem;
+    }
+    
+    .clienteGlobal2 img{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 1rem;
+    }
+    
+    .clienteCuadro{
+        padding: 6rem;
+        border-radius: 5rem;
+        flex: 1;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .nombreCliente{
+        font-weight: bold;
+        font-size: 1.375rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .clienteGlobal1 {
+        background-color: #BA9D79;
+    }
+    .clienteGlobal2{
+        background-color: #E3CDAE;
+    }
+    .clienteCuadro{
+        background-color: #f4f4f4;
+    }
+    .nombreCliente {
+        color: black;
+        font-family: "Aleo", serif;
+    }
+    .opinionCliente{
+        color: black;
+        font-family: "Roboto", sans-serif;
+    }
+
+
 
     .footerGlobal{
         display: flex;
@@ -1638,6 +1796,88 @@ iframe{
         background-color: #363636;
         color: #fff;
     }
+
+
+
+    .clienteGlobal1{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 1rem;
+    }
+    
+    .clienteGlobal1 img{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .clienteGlobal2{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 1rem;
+    }
+    
+    .clienteGlobal2 img{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .clienteCuadro{
+        padding: 6rem;
+        border-radius: 7rem;
+        flex: 1;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .nombreCliente{
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .clienteGlobal1 {
+        background-color: #BA9D79;
+    }
+    .clienteGlobal2{
+        background-color: #E3CDAE;
+    }
+    .clienteCuadro{
+        background-color: #f4f4f4;
+        padding: 10%;
+    }
+    .nombreCliente {
+        color: black;
+        font-family: "Aleo", serif;
+        text-align: center;
+    }
+    .opinionCliente{
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+    }
+
 
 
     .footerGlobal{
@@ -2033,6 +2273,88 @@ iframe{
         background-color: #363636;
         color: #fff;
     }
+
+
+
+    .clienteGlobal1{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 1rem;
+    }
+    
+    .clienteGlobal1 img{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .clienteGlobal2{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 1rem;
+    }
+    
+    .clienteGlobal2 img{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .clienteCuadro{
+        padding: 6rem;
+        border-radius: 5rem;
+        flex: 1;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .nombreCliente{
+        font-weight: bold;
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .clienteGlobal1 {
+        background-color: #BA9D79;
+    }
+    .clienteGlobal2{
+        background-color: #E3CDAE;
+    }
+    .clienteCuadro{
+        background-color: #f4f4f4;
+        padding: 10%;
+    }
+    .nombreCliente {
+        color: black;
+        font-family: "Aleo", serif;
+        text-align: center;
+    }
+    .opinionCliente{
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-size: 0.5rem;
+        text-align: center;
+    }
+
 
 
     .footerGlobal{
