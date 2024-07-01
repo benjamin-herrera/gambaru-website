@@ -97,12 +97,40 @@ font-family: "Roboto", sans-serif;
     background-color: #E3CDAE;
     color: black;
     font-family: "Roboto", sans-serif;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .625rem;
+    align-items: center;
 }
+
+.images{
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.images img{
+    width: 100%;
+    height: auto;
+}
+
 
 .segundoCuerpo{
     background-color: #BA9D79;
     color: black;
     font-family: "Roboto", sans-serif;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 1.25rem;
+}
+.segundoCuerpo p{
+    margin: 2.1875rem;
+    font-size: 1.15rem;
+    line-height: 1.15;
+    max-height: 85%;
+    overflow-y: auto;
+    margin-left: 6.25rem;
 }
 
 .inicioProductos a{
@@ -118,16 +146,6 @@ font-family: "Roboto", sans-serif;
 }
 
 
-
-.primerCuerpo{
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: .625rem;
-    align-items: center;
-}
-
-
 .logo{
     position: absolute;
     top: 50%;
@@ -138,7 +156,6 @@ font-family: "Roboto", sans-serif;
     justify-content: center;
     align-items: center;
 }
-
 .logo img{
     width: 30%;
     height: 30%;
@@ -146,35 +163,6 @@ font-family: "Roboto", sans-serif;
     opacity: 0.75;
 }
 
-.images{
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.images img{
-    width: 100%;
-    height: auto;
-}
-
-
-
-.segundoCuerpo{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    align-items: center;
-    gap: 1.25rem;
-}
-
-
-.segundoCuerpo p{
-    margin: 2.1875rem;
-    font-size: 1.15rem;
-    line-height: 1.15;
-    max-height: 85%;
-    overflow-y: auto;
-    margin-left: 6.25rem;
-}
 
 
 .inicioProductos{
@@ -236,7 +224,6 @@ font-family: "Roboto", sans-serif;
     color: #f4f4f4;
     text-align: center;
 }
-
 
 
 .productosPrincipal{
@@ -342,26 +329,20 @@ font-family: "Roboto", sans-serif;
 }
 
 
+
 .clienteGlobal1{
     position: relative;
     padding: 2rem;
     z-index: 1;
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 0;
     padding: 1rem;
     border-radius: 0;
     position: relative;
     z-index: 2;
-    gap: 5rem;
-}
-
-.clienteGlobal1 img{
-    width: 25rem;
-    height: 25rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 1rem;
+    gap: 1.5rem;
 }
 
 .clienteGlobal2{
@@ -369,18 +350,19 @@ font-family: "Roboto", sans-serif;
     padding: 2rem;
     z-index: 1;
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     margin-bottom: 0;
     padding: 1rem;
     border-radius: 0;
     position: relative;
     z-index: 2;
-    gap: 5rem;
+    gap: 1.5rem;
 }
 
-.clienteGlobal2 img{
-    width: 25rem;
-    height: 25rem;
+.clienteGlobal1 img, .clienteGlobal2 img{
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 1rem;
@@ -391,12 +373,16 @@ font-family: "Roboto", sans-serif;
     border-radius: 5rem;
     flex: 1;
     font-family: "Roboto", sans-serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .nombreCliente{
     font-weight: bold;
     font-size: 1.375rem;
     margin-bottom: 0.5rem;
+    color: black;
+    font-family: "Aleo", serif;
 }
 
 .clienteGlobal1 {
@@ -407,10 +393,6 @@ font-family: "Roboto", sans-serif;
 }
 .clienteCuadro{
     background-color: #f4f4f4;
-}
-.nombreCliente {
-    color: black;
-    font-family: "Aleo", serif;
 }
 .opinionCliente{
     color: black;
@@ -442,56 +424,73 @@ font-family: "Roboto", sans-serif;
     z-index: 1;
 }
 
-.emprendedorGlobal1, .emprendedorGlobal2{
+.emprendedorGlobal1{
+    position: relative;
+    padding: 2rem;
+    z-index: 2;
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 2rem;
     padding: 1rem;
     border-radius: 1rem;
     position: relative;
+    gap: 5rem;
+}
+.emprendedorGlobal2{
+    position: relative;
+    padding: 2rem;
     z-index: 2;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: relative;
     gap: 5rem;
 }
 
-.emprendedorGlobal1 img, .emprendedorGlobal2 img{
-    width: 25rem;
-    height: 25rem;
+.emprendedorGlobal1 img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0;
+    margin-left: 1rem;
+}
+.emprendedorGlobal2 img{
+    width: 15rem;
+    height: 15rem;
     border-radius: 50%;
     object-fit: cover;
     margin-right: 1rem;
+    margin-left: 0;
 }
 
 .emprendedorCuadro1, .emprendedorCuadro2{
-    padding: 1rem;
-    border-radius: 0.5rem;
+    padding: 3rem;
+    border-radius: 5rem;
     flex: 1;
     font-family: "Roboto", sans-serif;
-}
-
-.emprendedorGlobal2{
-    flex-direction: row-reverse;
-    gap: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: #f4f4f4ab;
 }
 
 .nombreEmprendedor1, .nombreEmprendedor2{
     font-weight: bold;
     font-size: 1.375rem;
     margin-bottom: 0.5rem;
+    color: black;
+    font-family: "Aleo", serif;
 }
 
 .sobreEmprendedor1, .sobreEmprendedor2{
-    margin: 0;
+    color: black;
+    font-family: "Roboto", sans-serif;
 }
 
-.nombreEmprendedor2{
-    text-align: end;
-}
-.emprendedorCuadro1, .emprendedorCuadro2{
-    background-color: #f4f4f4ab;
-    padding: 5rem;
-    border-radius: 3rem;
-    font-size: 1.25rem;
-}
 
 .section-sobre-nosotros{
     position: absolute;
@@ -508,6 +507,7 @@ font-family: "Roboto", sans-serif;
     height: 100%;
     object-fit: cover;
 }
+
 
 .campoContacto1{
     background-color: #E3CDAE;
@@ -788,14 +788,32 @@ iframe{
         background-color: #E3CDAE;
         color: black;
         font-family: "Roboto", sans-serif;
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .625rem;
+        align-items: center;
     }
     
     .segundoCuerpo{
         background-color: #BA9D79;
         color: black;
         font-family: "Roboto", sans-serif;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: center;
+        gap: 1.25rem;
+    }
+    .segundoCuerpo p{
+        margin: 2rem;
+        font-size: 2rem;
+        line-height: 1.15;
+        max-height: 85%;
+        overflow-y: auto;
+        margin-left: 6.25rem;
     }
     
+
     .inicioProductos a{
         background-color: #f4f4f4;
         color: black;
@@ -805,19 +823,7 @@ iframe{
         border-style: solid;
         border-color: white;
         border-width: .1563rem;
-    
     }
-    
-    
-    
-    .primerCuerpo{
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: .625rem;
-        align-items: center;
-    }
-    
     
     .logo{
         position: absolute;
@@ -829,7 +835,6 @@ iframe{
         justify-content: center;
         align-items: center;
     }
-    
     .logo img{
         width: 30%;
         height: 30%;
@@ -842,30 +847,11 @@ iframe{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
-    
     .images img{
         width: 100%;
         height: auto;
     }
     
-    
-    
-    .segundoCuerpo{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
-        gap: 1.25rem;
-    }
-    
-    
-    .segundoCuerpo p{
-        margin: 2rem;
-        font-size: 2rem;
-        line-height: 1.15;
-        max-height: 85%;
-        overflow-y: auto;
-        margin-left: 6.25rem;
-    }
     
     
     .inicioProductos{
@@ -875,15 +861,11 @@ iframe{
         align-items: center;
         height: 100%;
     }
-    
-    
     .inicioProductos img{
         width: 100%;
         height: 85%;
         border-radius: 10%;
     }
-    
-    
     .inicioProductos .button{
         position: absolute;
         bottom: 10%;
@@ -894,7 +876,6 @@ iframe{
         transition: opacity 0.3s;
         font-size: 1.75rem;
     }
-    
     .inicioProductos .button:hover{
         opacity: 1;
     }
@@ -909,7 +890,6 @@ iframe{
         font-size: 1.75rem;
         box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.1);
     }
-    
     .productosPrincipal h2{
         position: absolute;
         bottom: 5rem;
@@ -919,7 +899,6 @@ iframe{
         font-size: 1.75rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-    
     .productosPrincipal a{
         position: absolute;
         bottom: 1rem;
@@ -934,7 +913,6 @@ iframe{
         background-color: #333;
         color: #fff;
     }
-    
     
     .productosIntermedio{
         padding: 1.5rem;
@@ -952,7 +930,6 @@ iframe{
         grid-template-columns: repeat(3, 1fr);
         gap: 0;
     }
-    
     .productosFinal div{
         position: relative;
         width: 100%;
@@ -1062,6 +1039,117 @@ iframe{
 
 
 
+    .emprendedorCuadro{
+        background-color: #f4f4f4ab;
+    }
+    .nombreEmprendedor{
+        color: black;
+        font-family: "Aleo", serif;
+    }
+    .sobreEmprendedor{
+        color: black;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    
+    .container{
+        position: relative;
+    }
+    
+    .section-emprendedores{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+    }
+    
+    .emprendedorGlobal1{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        position: relative;
+        z-index: 2;
+        gap: 1.5rem;
+    }
+    .emprendedorGlobal2{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        position: relative;
+        z-index: 2;
+        gap: 1.5rem;
+    }
+    
+    .emprendedorGlobal1 img{
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 0;
+        margin-right: 1rem;
+    }
+    .emprendedorGlobal2 img{
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 1rem;
+        margin-right: 0;
+    }
+    
+    .emprendedorCuadro1, .emprendedorCuadro2{
+        padding: 5rem;
+        border-radius: 5rem;
+        flex: 1;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        background-color: #f4f4f4ab;
+    }
+
+    .nombreEmprendedor1, .nombreEmprendedor2{
+        font-weight: bold;
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+        color: black;
+        font-family: "Aleo", serif;
+    }
+    
+    .sobreEmprendedor1, .sobreEmprendedor2{
+        color: black;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .section-sobre-nosotros{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        display: flex;
+    }
+    
+    .section-sobre-nosotros img{
+        width: 33.33%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+
     .footerGlobal{
         display: flex;
         flex-direction: row;
@@ -1113,7 +1201,7 @@ iframe{
     }
     .footerGlobal form input[type="email"]{
         width: 30rem;
-        height: 3rem;
+        height: 1.5rem;
     }
     .footerGlobal form input[type="sumbit"]{
         width: 3rem;
@@ -1335,56 +1423,54 @@ iframe{
         padding: 2rem;
         z-index: 1;
         display: flex;
+        flex-direction: row;
         align-items: center;
         margin-bottom: 0;
         padding: 1rem;
         border-radius: 0;
         position: relative;
         z-index: 2;
-        gap: 5rem;
+        gap: 1.5rem;
     }
-    
-    .clienteGlobal1 img{
-        width: 10rem;
-        height: 10rem;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 1rem;
-    }
-    
     .clienteGlobal2{
         position: relative;
         padding: 2rem;
         z-index: 1;
         display: flex;
+        flex-direction: row-reverse;
         align-items: center;
         margin-bottom: 0;
         padding: 1rem;
         border-radius: 0;
         position: relative;
         z-index: 2;
-        gap: 5rem;
+        gap: 1.5rem;
     }
-    
-    .clienteGlobal2 img{
+
+    .clienteGlobal1 img, .clienteGlobal2 img{
         width: 10rem;
         height: 10rem;
         border-radius: 50%;
         object-fit: cover;
-        margin-right: 1rem;
+        margin-right: 0;
+        margin-left: 1rem;
     }
-    
+
     .clienteCuadro{
-        padding: 6rem;
+        padding: 3rem;
         border-radius: 5rem;
         flex: 1;
         font-family: "Roboto", sans-serif;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     
     .nombreCliente{
         font-weight: bold;
         font-size: 1.375rem;
         margin-bottom: 0.5rem;
+        color: black;
+        font-family: "Aleo", serif;
     }
     
     .clienteGlobal1 {
@@ -1396,13 +1482,119 @@ iframe{
     .clienteCuadro{
         background-color: #f4f4f4;
     }
-    .nombreCliente {
-        color: black;
-        font-family: "Aleo", serif;
-    }
     .opinionCliente{
         color: black;
         font-family: "Roboto", sans-serif;
+    }
+
+
+
+    .emprendedorCuadro{
+        background-color: #f4f4f4ab;
+    }
+    .nombreEmprendedor{
+        color: black;
+        font-family: "Aleo", serif;
+    }
+    .sobreEmprendedor{
+        color: black;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    
+    .container{
+        position: relative;
+    }
+    
+    .section-emprendedores{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+    }
+    
+    .emprendedorGlobal1{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 1.5rem;
+    }
+    .emprendedorGlobal2{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 1.5rem;
+    }
+    
+    .emprendedorGlobal1 img{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 0;
+        margin-left: 1rem;
+    }
+    .emprendedorGlobal2 img{
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 1rem;
+        margin-left: 0;
+    }
+    
+    .emprendedorCuadro1, .emprendedorCuadro2{
+        padding: 3rem;
+        border-radius: 5rem;
+        flex: 1;
+        font-family: "Roboto", sans-serif;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        background-color: #f4f4f4ab;
+    }
+
+    .nombreEmprendedor1, .nombreEmprendedor2{
+        font-weight: bold;
+        font-size: 1.375rem;
+        margin-bottom: 0.5rem;
+        color: black;
+        font-family: "Aleo", serif;
+    }
+    
+    .sobreEmprendedor1, .sobreEmprendedor2{
+        color: black;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .section-sobre-nosotros{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        display: flex;
+    }
+    
+    .section-sobre-nosotros img{
+        width: 33.33%;
+        height: 100%;
+        object-fit: cover;
     }
 
 
@@ -1625,7 +1817,7 @@ iframe{
     
     .segundoCuerpo p{
         margin: 1rem;
-        font-size: 0.75rem;
+        font-size: 0.5rem;
         line-height: 0.85rem;
         max-height: 100%;
         overflow-y: auto;
@@ -1799,7 +1991,7 @@ iframe{
 
 
 
-    .clienteGlobal1{
+    .clienteGlobal1, .clienteGlobal2{
         position: relative;
         padding: 2rem;
         z-index: 1;
@@ -1814,29 +2006,7 @@ iframe{
         gap: 1rem;
     }
     
-    .clienteGlobal1 img{
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    
-    .clienteGlobal2{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 1rem;
-    }
-    
-    .clienteGlobal2 img{
+    .clienteGlobal1 img, .clienteGlobal2 img{
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
@@ -1848,12 +2018,17 @@ iframe{
         border-radius: 7rem;
         flex: 1;
         font-family: "Roboto", sans-serif;
+        background-color: #f4f4f4;
+        padding: 10%;
     }
     
     .nombreCliente{
         font-weight: bold;
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
+        color: black;
+        font-family: "Aleo", serif;
+        text-align: center;
     }
     
     .clienteGlobal1 {
@@ -1862,20 +2037,101 @@ iframe{
     .clienteGlobal2{
         background-color: #E3CDAE;
     }
-    .clienteCuadro{
-        background-color: #f4f4f4;
-        padding: 10%;
-    }
-    .nombreCliente {
-        color: black;
-        font-family: "Aleo", serif;
-        text-align: center;
-    }
+
     .opinionCliente{
         color: black;
         font-family: "Roboto", sans-serif;
         font-size: 1rem;
         text-align: center;
+    }
+
+
+
+    .emprendedorCuadro{
+        background-color: #f4f4f4ab;
+    }
+    .nombreEmprendedor{
+        color: black;
+        font-weight: bold;
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+    .sobreEmprendedor{
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-size: 0.5rem;
+        text-align: center;
+    }
+    
+    .emprendedorGlobal1, .emprendedorGlobal2{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 1rem;
+    }
+    
+    .emprendedorGlobal1 img, .emprendedorGlobal2 img{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .emprendedorCuadro1, .emprendedorCuadro2{
+        padding: 6rem;
+        border-radius: 7rem;
+        flex: 1;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .nombreEmprendedor1, .nombreEmprendedor2{
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: black;
+        font-family: "Aleo", serif;
+        text-align: center;
+    }
+    
+    .sobreEmprendedor1, .sobreEmprendedor2{
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .emprendedorCuadro1, .emprendedorCuadro2{
+        background-color: #f4f4f4ab;
+        padding: 6rem;
+        border-radius: 7rem;
+        flex: 1;
+        font-family: "Roboto", sans-serif;
+        padding: 10%;
+    }
+    
+    .section-sobre-nosotros{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .section-sobre-nosotros img{
+        width: 100%;
+        height: 33.5%;
+        object-fit: cover;
     }
 
 
@@ -2102,7 +2358,7 @@ iframe{
     
     .segundoCuerpo p{
         margin: 1rem;
-        font-size: 0.40rem;
+        font-size: 0.30rem;
         line-height: 0.50rem;
         max-height: 100%;
         overflow-y: auto;
@@ -2276,7 +2532,7 @@ iframe{
 
 
 
-    .clienteGlobal1{
+    .clienteGlobal1, .clienteGlobal2{
         position: relative;
         padding: 2rem;
         z-index: 1;
@@ -2291,31 +2547,9 @@ iframe{
         gap: 1rem;
     }
     
-    .clienteGlobal1 img{
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    
-    .clienteGlobal2{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 1rem;
-    }
-    
-    .clienteGlobal2 img{
-        width: 5rem;
-        height: 5rem;
+    .clienteGlobal1 img, .clienteGlobal2 img{
+        width: 3rem;
+        height: 3rem;
         border-radius: 50%;
         object-fit: cover;
     }
@@ -2325,12 +2559,17 @@ iframe{
         border-radius: 5rem;
         flex: 1;
         font-family: "Roboto", sans-serif;
+        background-color: #f4f4f4;
+        padding: 10%;
     }
     
     .nombreCliente{
         font-weight: bold;
         font-size: 0.75rem;
         margin-bottom: 0.5rem;
+        color: black;
+        font-family: "Aleo", serif;
+        text-align: center;
     }
     
     .clienteGlobal1 {
@@ -2339,20 +2578,94 @@ iframe{
     .clienteGlobal2{
         background-color: #E3CDAE;
     }
-    .clienteCuadro{
-        background-color: #f4f4f4;
-        padding: 10%;
-    }
-    .nombreCliente {
-        color: black;
-        font-family: "Aleo", serif;
-        text-align: center;
-    }
+
     .opinionCliente{
         color: black;
         font-family: "Roboto", sans-serif;
         font-size: 0.5rem;
         text-align: center;
+    }
+
+
+
+    .emprendedorCuadro{
+        background-color: #f4f4f4ab;
+    }
+    .nombreEmprendedor{
+        color: black;
+        font-weight: bold;
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+    .sobreEmprendedor{
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-size: 0.5rem;
+        text-align: center;
+    }
+    
+    .emprendedorGlobal1, .emprendedorGlobal2{
+        position: relative;
+        padding: 2rem;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 1rem;
+        border-radius: 0;
+        position: relative;
+        z-index: 2;
+        gap: 1rem;
+    }
+    
+    .emprendedorGlobal1 img, .emprendedorGlobal2 img{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .emprendedorCuadro1, .emprendedorCuadro2{
+        padding: 6rem;
+        border-radius: 5rem;
+        flex: 1;
+        font-family: "Roboto", sans-serif;
+        background-color: #f4f4f4ab;
+        padding: 10%;
+    }
+    
+    .nombreEmprendedor1, .nombreEmprendedor2{
+        font-weight: bold;
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+        color: black;
+        font-family: "Aleo", serif;
+        text-align: center;
+    }
+    
+    .sobreEmprendedor1, .sobreEmprendedor2{
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-size: 0.5rem;
+        text-align: center;
+    }
+    
+    .section-sobre-nosotros{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .section-sobre-nosotros img{
+        width: 100%;
+        height: 33.5%;
+        object-fit: cover;
     }
 
 
