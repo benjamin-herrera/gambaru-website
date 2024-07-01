@@ -509,6 +509,7 @@ font-family: "Roboto", sans-serif;
 }
 
 
+
 .campoContacto1{
     background-color: #E3CDAE;
 }
@@ -598,6 +599,7 @@ font-family: "Roboto", sans-serif;
     margin-bottom: .625rem;
     border: .0625rem solid #ccc;
     border-radius: .3125rem;
+    font-family: "Roboto", sans-serif;
 }
 
 .camposIngreso input[type="submit"]{
@@ -608,6 +610,7 @@ font-family: "Roboto", sans-serif;
     border: none;
     border-radius: .3125rem;
     cursor: pointer;
+    font-family: "Roboto", sans-serif;
 }
 
 iframe{
@@ -1146,6 +1149,93 @@ iframe{
         width: 33.33%;
         height: 100%;
         object-fit: cover;
+    }
+
+
+
+    .contenedor{
+        display: flex;
+        justify-content: space-between;
+        padding: 1.25rem;
+        background-color: #BA9D79;
+    }
+
+    .campoContacto1, .campoContacto2{
+        background-color: #E3CDAE;
+        flex: 1;
+        padding: 1.25rem;
+        border-radius: .9375rem;
+        box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+        margin: .625rem;
+    }
+    .campoContacto1 h4, .campoContacto2 h4{
+        color: black;
+        font-family: "Aleo", serif;
+        text-align: center;
+        text-align: center;
+        margin-bottom: 1.25rem;
+        font-size: 2.5rem;
+    }
+    .datosContacto li{
+        margin-bottom: .625rem;
+    }
+    .cuadroContacto{
+        background-color: #BA9D79;
+        padding: 1.25rem;
+        border-radius: .9375rem;
+    }
+    .datosContacto{
+        background-color: #f4f4f4;
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5rem;
+        list-style: none;
+        list-style: none;
+        padding: .3125rem;
+        border-radius: .9375rem;
+    }
+    .camposIngreso{
+        color: black;
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .625rem;
+        padding: .625rem;
+    }
+    .camposIngreso input{
+        background-color: #f4f4f4;
+    }
+    
+    .camposIngreso input[type="text"],
+    .camposIngreso input[type="email"],
+    .camposIngreso input[type="nombre"],
+    .camposIngreso textarea{
+        flex: 1 1 50%;
+        padding: .625rem;
+        margin-bottom: .625rem;
+        border: .0625rem solid #ccc;
+        border-radius: .3125rem;
+        font-size: 1.5rem;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .camposIngreso input[type="submit"]{
+        flex: 1 1 100%;
+        padding: .625rem;
+        background-color: #E3CDAE;
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: .3125rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    iframe{
+        width: 100%;
+        height: 58rem;
+        border: none;
+        border-radius: .9375rem;
     }
 
 
@@ -2136,6 +2226,102 @@ iframe{
 
 
 
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        padding: 0.25rem;
+        background-color: #BA9D79;
+    }
+
+    
+    .campoContacto1,
+    .campoContacto2{
+        flex: 1;
+        padding: 1.25rem;
+        border-radius: .9375rem;
+        box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+        margin: .625rem;
+        background-color: #E3CDAE;
+    }
+    
+    .campoContacto1 h4,
+    .campoContacto2 h4{
+        text-align: center;
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        color: black;
+        font-family: "Aleo", serif;
+        text-align: center;
+    }
+    
+    .cuadroContacto{
+        padding: 1.25rem;
+        border-radius: 1rem;
+        background-color: #BA9D79;
+    }
+    
+    .datosContacto{
+        list-style: none;
+        padding: 0.25rem;
+        border-radius: 1rem;
+        background-color: #f4f4f4;
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-size: 0.75rem;
+        list-style: none;
+    }
+    .datosContacto li{
+        margin-bottom: 0.25;
+    }
+    
+    .camposIngreso{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25;
+        padding: 0.25rem;
+        color: black;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .camposIngreso input{
+        background-color: #f4f4f4;
+    }
+    .camposIngreso input[type="text"],
+    .camposIngreso input[type="email"],
+    .camposIngreso input[type="nombre"],
+    .camposIngreso textarea{
+        display: flex;
+        flex: 1 1 50%;
+        flex-direction: column;
+        padding: 0.25rem;
+        margin-bottom: 0;
+        border: 0.05rem solid #ccc;
+        border-radius: .3125rem;
+        font-size: 0.75rem;
+        width: 100%;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .camposIngreso input[type="submit"]{
+        flex: 1 1 100%;
+        padding: .625rem;
+        background-color: #E3CDAE;
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-size: 0.5rem;
+        font-family: "Roboto", sans-serif;
+
+    }
+    
+    iframe{
+        width: 100%;
+        height: 20rem;
+    }
+
+
+
     .footerGlobal{
         display: flex;
         flex-direction: row;
@@ -2666,6 +2852,102 @@ iframe{
         width: 100%;
         height: 33.5%;
         object-fit: cover;
+    }
+
+
+
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        padding: 0.25rem;
+        background-color: #BA9D79;
+    }
+
+    
+    .campoContacto1,
+    .campoContacto2{
+        flex: 1;
+        padding: 1.25rem;
+        border-radius: .9375rem;
+        box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
+        margin: .625rem;
+        background-color: #E3CDAE;
+    }
+    
+    .campoContacto1 h4,
+    .campoContacto2 h4{
+        text-align: center;
+        margin-bottom: 1.25rem;
+        font-size: 1rem;
+        color: black;
+        font-family: "Aleo", serif;
+        text-align: center;
+    }
+    
+    .cuadroContacto{
+        padding: 1.25rem;
+        border-radius: 1rem;
+        background-color: #BA9D79;
+    }
+    
+    .datosContacto{
+        list-style: none;
+        padding: 0.25rem;
+        border-radius: 1rem;
+        background-color: #f4f4f4;
+        color: black;
+        font-family: "Roboto", sans-serif;
+        font-size: 0.5rem;
+        list-style: none;
+    }
+    .datosContacto li{
+        margin-bottom: 0.25;
+    }
+    
+    .camposIngreso{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25;
+        padding: 0.25rem;
+        color: black;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .camposIngreso input{
+        background-color: #f4f4f4;
+    }
+    .camposIngreso input[type="text"],
+    .camposIngreso input[type="email"],
+    .camposIngreso input[type="nombre"],
+    .camposIngreso textarea{
+        display: flex;
+        flex: 1 1 50%;
+        flex-direction: column;
+        padding: 0.25rem;
+        margin-bottom: 0;
+        border: 0.05rem solid #ccc;
+        border-radius: .3125rem;
+        font-size: 0.5rem;
+        width: 100%;
+        font-family: "Roboto", sans-serif;
+    }
+    
+    .camposIngreso input[type="submit"]{
+        flex: 1 1 100%;
+        padding: .625rem;
+        background-color: #E3CDAE;
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-size: 0.5rem;
+        font-family: "Roboto", sans-serif;
+
+    }
+    
+    iframe{
+        width: 100%;
+        height: 20rem;
     }
 
 
