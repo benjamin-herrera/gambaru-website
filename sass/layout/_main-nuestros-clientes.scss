@@ -1,0 +1,36 @@
+.clienteGlobal1{
+    @include personaGlobal1;
+    background-color: $color-secundario;
+    img{
+        @include personaImagen;
+    }
+    div{
+        @include personaCuadro;
+        background-color: $color-blanco-2;
+        .nombreCliente{
+            @include personaNombre;
+        }
+        .opinionCliente{
+            font-family: $tipografia-b;
+            color: $color-negro;
+        }
+    }
+}
+.clienteGlobal2{
+    @include personaGlobal2;
+    background-color: $color-principal;
+    img{
+        @include personaImagen;
+    }
+    div{
+        @include personaCuadro;
+        background-color: $color-blanco-2;
+        .nombreCliente{
+            @include personaNombre;
+        }
+        .opinionCliente{
+            font-family: $tipografia-b;
+            color: $color-negro;
+        }
+    }
+}

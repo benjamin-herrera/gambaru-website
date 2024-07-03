@@ -352,6 +352,250 @@ font-family: "Roboto", sans-serif;
     background-color: #363636;
     color: white; }
 
+.clienteGlobal1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 1rem;
+  border: 0;
+  z-index: 2;
+  gap: 1.5rem;
+  background-color: #BA9D79; }
+  .clienteGlobal1 img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem; }
+  .clienteGlobal1 div {
+    padding: 6rem;
+    border-radius: 5rem;
+    flex: 1;
+    font-family: "Roboto", sans-serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: #f4f4f4; }
+    .clienteGlobal1 div .nombreCliente {
+      font-weight: bold;
+      font-size: 1.375rem;
+      margin-bottom: 0.5rem;
+      color: black;
+      font-family: "Aleo", serif; }
+    .clienteGlobal1 div .opinionCliente {
+      font-family: "Roboto", sans-serif;
+      color: black; }
+
+.clienteGlobal2 {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 1rem;
+  border: 0;
+  z-index: 2;
+  gap: 1.5rem;
+  background-color: #E3CDAE; }
+  .clienteGlobal2 img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem; }
+  .clienteGlobal2 div {
+    padding: 6rem;
+    border-radius: 5rem;
+    flex: 1;
+    font-family: "Roboto", sans-serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: #f4f4f4; }
+    .clienteGlobal2 div .nombreCliente {
+      font-weight: bold;
+      font-size: 1.375rem;
+      margin-bottom: 0.5rem;
+      color: black;
+      font-family: "Aleo", serif; }
+    .clienteGlobal2 div .opinionCliente {
+      font-family: "Roboto", sans-serif;
+      color: black; }
+
+.container {
+  position: relative; }
+
+.emprendedorGlobal1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 1rem;
+  border: 0;
+  z-index: 2;
+  gap: 1.5rem; }
+  .emprendedorGlobal1 img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem; }
+  .emprendedorGlobal1 div {
+    padding: 6rem;
+    border-radius: 5rem;
+    flex: 1;
+    font-family: "Roboto", sans-serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: #f4f4f4ab; }
+    .emprendedorGlobal1 div .nombreEmprendedor {
+      font-weight: bold;
+      font-size: 1.375rem;
+      margin-bottom: 0.5rem;
+      color: black;
+      font-family: "Aleo", serif; }
+    .emprendedorGlobal1 div .sobreEmprendedor {
+      font-family: "Roboto", sans-serif;
+      color: black; }
+
+.emprendedorGlobal2 {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 1rem;
+  border: 0;
+  z-index: 2;
+  gap: 1.5rem; }
+  .emprendedorGlobal2 img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem; }
+  .emprendedorGlobal2 div {
+    padding: 6rem;
+    border-radius: 5rem;
+    flex: 1;
+    font-family: "Roboto", sans-serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: #f4f4f4ab; }
+    .emprendedorGlobal2 div .nombreEmprendedor {
+      font-weight: bold;
+      font-size: 1.375rem;
+      margin-bottom: 0.5rem;
+      color: black;
+      font-family: "Aleo", serif; }
+    .emprendedorGlobal2 div .sobreEmprendedor {
+      font-family: "Roboto", sans-serif;
+      color: black; }
+
+.section-sobre-nosotros {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex; }
+  .section-sobre-nosotros img {
+    width: 33.33%;
+    height: 100%;
+    object-fit: cover; }
+
+.contenedor {
+  display: flex;
+  flex-direction: none;
+  flex-wrap: none;
+  flex-flow: none;
+  justify-content: space-between;
+  align-items: none;
+  align-content: none;
+  gap: none;
+  padding: 1.25rem;
+  background-color: #BA9D79; }
+  .contenedor div {
+    background-color: #E3CDAE;
+    flex: 1;
+    padding: 1.25rem;
+    border-radius: .9375rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    margin: .625rem; }
+    .contenedor div h4 {
+      text-align: center;
+      font-family: "Aleo", serif;
+      color: black;
+      text-align: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem; }
+    .contenedor div div div {
+      background-color: #BA9D79;
+      padding: 1.25rem;
+      border-radius: .9375rem; }
+      .contenedor div div div ul {
+        list-style: none;
+        font-family: "Roboto", sans-serif;
+        background-color: #f4f4f4;
+        color: black;
+        list-style: none;
+        padding: .3125rem;
+        border-radius: .9375rem; }
+        .contenedor div div div ul li {
+          margin-bottom: 0.625rem; }
+      .contenedor div div div form {
+        font-family: "Roboto", sans-serif;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        gap: .625rem;
+        padding: .625rem; }
+        .contenedor div div div form input {
+          background-color: #f4f4f4; }
+  .contenedor div {
+    background-color: #E3CDAE;
+    flex: 1;
+    padding: 1.25rem;
+    border-radius: .9375rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    margin: .625rem; }
+    .contenedor div h4 {
+      text-align: center;
+      font-family: "Aleo", serif;
+      color: black;
+      text-align: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem; }
+
+.camposIngreso input[type="text"],
+.camposIngreso input[type="email"],
+.camposIngreso input[type="nombre"],
+.camposIngreso textarea {
+  flex: 1 1 50%;
+  padding: .625rem;
+  margin-bottom: .625rem;
+  border: .0625rem solid #ccc;
+  border-radius: .3125rem;
+  font-family: "Roboto", sans-serif; }
+
+.camposIngreso input[type="submit"] {
+  flex: 1 1 100%;
+  padding: .625rem;
+  background-color: #E3CDAE;
+  color: black;
+  border: none;
+  border-radius: .3125rem;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif; }
+
+iframe {
+  width: 100%;
+  height: 39.0625rem;
+  border: none;
+  border-radius: .9375rem; }
+
 /*Cuarto llamar a los componentes*/
 /*Ultimo llamar a los Mediaquerry
 Si son Desktop First van en orden decreciente

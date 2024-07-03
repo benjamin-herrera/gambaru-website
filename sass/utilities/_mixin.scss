@@ -26,3 +26,52 @@
     margin: $margin;
     border-radius: 50%;
 }
+
+@mixin personaGlobal1{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 1rem;
+    border: 0;
+    z-index: 2;
+    gap: 1.5rem;
+}
+
+@mixin personaGlobal2{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 1rem;
+    border: 0;
+    z-index: 2;
+    gap: 1.5rem;
+}
+
+@mixin personaCuadro{
+    padding: 6rem;
+    border-radius: 5rem;
+    flex: 1;
+    font-family: "Roboto", sans-serif;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@mixin personaImagen{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+@mixin personaNombre{
+    font-weight: bold;
+    font-size: 1.375rem;
+    margin-bottom: 0.5rem;
+    color: black;
+    font-family: "Aleo", serif;
+}
