@@ -1,3022 +1,358 @@
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*Primero llamar archivos correspondientes a las utilities*/
+/*$colores:(
+    color1: ,
+    color2: ,
+    color3: ,
+);
+
+$fuentes:(
+    fuente1: ,
+    fuente2: ,
+);*/
+/*Segundo llamar a los partials que corresponden a la carpeta base*/
+@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 /* Fuentes:
 font-family: "Aleo", serif;
 font-family: "Roboto", sans-serif;
 */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #848484;
-    margin: 0;
-    color: white;
-}
-
-
-.navbar{
+/*Tercero llamar componentes o todo lo que corresponde a layout*/
+.header {
+  display: flex;
+  flex-direction: none;
+  flex-wrap: none;
+  flex-flow: none;
+  justify-content: space-between;
+  align-items: center;
+  align-content: none;
+  gap: none;
+  background-color: #848484;
+  color: white;
+  margin: 0; }
+  .header nav {
     display: flex;
     flex-direction: column;
+    flex-wrap: none;
+    flex-flow: none;
     justify-content: space-between;
     align-items: center;
-    background-color: #E3CDAE;
+    align-content: none;
+    gap: none;
     padding: 0 0;
     width: 100%;
     margin: 0;
-}
+    background-color: #E3CDAE; }
+    .header nav div a {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: #f4f4f4; }
+    .header nav div img {
+      width: 6.25rem;
+      height: 6.25rem;
+      margin: 0.3125rem;
+      border-radius: 50%;
+      object-fit: cover; }
+    .header nav ul {
+      display: flex;
+      flex-direction: none;
+      flex-wrap: none;
+      flex-flow: none;
+      justify-content: space-between;
+      align-items: none;
+      align-content: none;
+      gap: none;
+      width: 100%;
+      padding: 0.625rem;
+      list-style: none;
+      text-decoration: none;
+      font-family: "Aleo", serif;
+      background-color: white;
+      color: black; }
+      .header nav ul li {
+        flex: 1;
+        text-align: center; }
+        .header nav ul li a {
+          display: block;
+          text-decoration: none;
+          font-size: 1rem;
+          padding: 0.75rem 1.5rem;
+          border: 2px solid white;
+          border-radius: 1.25rem;
+          border-width: 0.2031rem;
+          padding: 0.3125rem;
+          max-width: 15rem;
+          margin: 0 auto;
+          background-color: white;
+          color: #84848485;
+          border-color: #848484;
+          transition: background-color 0.3s, border-color 0.3, color 0.3s; }
+          .header nav ul li a:hover {
+            background-color: #f4f4f4;
+            border-color: black;
+            color: black; }
+    .header nav .navbar .active {
+      background-color: white;
+      border-color: black;
+      color: black; }
 
-.navbar-logo a{
-    margin-bottom: 1rem;
-    color: #f4f4f4;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-.navbar-logo img{
-    width: 6.25rem;
-    height: 6.25rem;
-    margin: .3125rem;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.navbar-menu{
+.footerGlobal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: none;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: none;
+  gap: none;
+  padding: 1.25rem;
+  background-color: #f4f4f4;
+  color: black;
+  font-family: "Aleo", serif; }
+  .footerGlobal dl {
+    margin-bottom: 1.25rem; }
+    .footerGlobal dl dt {
+      font-size: 1rem;
+      font-weight: bold; }
+    .footerGlobal dl dd {
+      margin: 0.3125rem;
+      font-size: 0.75rem;
+      font-size: "Roboto", sans-serif;
+      color: black; }
+  .footerGlobal div {
     display: flex;
-    justify-content: space-between;
-    list-style: none;
-    background-color: white;
-    color: black;
-    font-family: "Aleo", serif;
-    text-decoration: none;
-    width: 100%;
-    padding: .625rem;
-}
-
-.navbar-item{
-    flex: 1;
-    text-align: center;
-}
-.navbar-item a{
-    display: block;
-    color: #84848485;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-    background-color: white;
-    border: 2px solid white;
-    border-radius: 1.25rem;
-    border-width: .2031rem;
-    padding: .3125rem;
-    max-width: 15rem;
-    margin: 0 auto;
-    border-color: #848484;
-    transition: background-color 0.3s, border-color 0.3, color 0.3s;
-}
-.navbar-item a:hover{
-    background-color: #f4f4f4;
-    border-color: black;
-    color: black;
-}
-.navbar .active{
-    background-color: white;
-    border-color: black;
-    color: black;
-}
-
-
-
-.primerCuerpo{
-    background-color: #E3CDAE;
-    color: black;
-    font-family: "Roboto", sans-serif;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: .625rem;
     align-items: center;
-}
-
-.images{
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-.images img{
-    width: 100%;
-    height: auto;
-}
-
-
-.segundoCuerpo{
-    background-color: #BA9D79;
-    color: black;
-    font-family: "Roboto", sans-serif;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    margin-bottom: 1.25rem; }
+    .footerGlobal div p {
+      margin-right: 0.625rem;
+      font-size: 1rem; }
+    .footerGlobal div img {
+      width: 1.5rem;
+      height: auto;
+      margin-right: 0.625rem; }
+  .footerGlobal form {
+    display: flex;
     align-items: center;
-    gap: 1.25rem;
-}
-.segundoCuerpo p{
-    margin: 2.1875rem;
-    font-size: 1.15rem;
-    line-height: 1.15;
-    max-height: 85%;
-    overflow-y: auto;
-    margin-left: 6.25rem;
-}
+    max-width: 100%; }
+    .footerGlobal form label, .footerGlobal form input[type="email"], .footerGlobal form input[type="sumbit"] {
+      margin-right: 0.625rem;
+      font-size: 1rem; }
+    .footerGlobal form input[type="email"] {
+      width: 100%;
+      height: 100%; }
+    .footerGlobal form input[type="sumbit"] {
+      width: 3rem;
+      height: 3rem; }
 
-.inicioProductos a{
-    background-color: #f4f4f4;
-    color: black;
-    font-family: "Roboto", sans-serif;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-style: solid;
-    border-color: white;
-    border-width: .1563rem;
-
-}
-
-
-.logo{
+.main .primerCuerpo {
+  display: grid;
+  grid-template-columns: repeat 3, 1fr;
+  grid-template-rows: none;
+  grid-template-areas: none;
+  align-items: center;
+  column-gap: none;
+  row-gap: none;
+  gap: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  background-color: #E3CDAE;
+  color: black;
+  position: relative; }
+  .main .primerCuerpo .logo {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
     display: flex;
+    flex-direction: none;
+    flex-wrap: none;
+    flex-flow: none;
     justify-content: center;
     align-items: center;
-}
-.logo img{
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-    opacity: 0.75;
-}
+    align-content: none;
+    gap: none; }
+    .main .primerCuerpo .logo img {
+      width: 30%;
+      height: 30%;
+      margin: none;
+      border-radius: 50%;
+      opacity: 0.75; }
+  .main .primerCuerpo .images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: none;
+    align-items: none;
+    column-gap: none;
+    row-gap: none;
+    gap: none;
+    grid-column: 1 / -1; }
+    .main .primerCuerpo .images img {
+      width: 100%;
+      height: auto; }
 
-
-
-.inicioProductos{
-    position: relative;
+.main .segundoCuerpo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: none;
+  grid-template-areas: none;
+  align-items: center;
+  column-gap: none;
+  row-gap: none;
+  gap: 1.25rem;
+  font-family: "Roboto", sans-serif;
+  background-color: #BA9D79;
+  color: black; }
+  .main .segundoCuerpo p {
+    margin: 2.1875rem;
+    margin-left: 6.25rem;
+    line-height: 1.15;
+    max-height: 85%;
+    overflow-y: auto;
+    font-size: 1.15rem; }
+  .main .segundoCuerpo div {
     display: flex;
+    flex-direction: none;
+    flex-wrap: none;
+    flex-flow: none;
     justify-content: center;
     align-items: center;
-    height: 100%;
-}
-
-
-.inicioProductos img{
-    width: 100%;
-    height: 85%;
-    border-radius: 10%;
-    margin-right: 2rem;
-}
-
-
-.inicioProductos .button{
-    position: absolute;
-    bottom: 10%;
-    display: inline-block;
-    padding: 2.5% 25%;
-    border-radius: 1.5625rem;
-    opacity: 0.75;
-    transition: opacity 0.3s;
-    margin-right: 2rem;
-}
-
-.inicioProductos .button:hover{
-    opacity: 1;
-}
-
-
-
-.productosPrincipal h1{
-    background-color: #84848485;
-    color: #f4f4f4;
-    font-family: "Aleo", serif;
-}
-.productosPrincipal h2{
-    background-color: #84848485;
-    color: #f4f4f4;
-    font-family: "Aleo", serif;
-    text-align: right;
-}
-.productosPrincipal a{
-    text-decoration: none;
-    background-color: #f4f4f4;
-    color: black;
-    font-family: "Aleo", serif;
-}
-
-
-.productosIntermedio{
-    background-color: #848484;
-    font-family: "Aleo", serif;
-    color: #f4f4f4;
-    text-align: center;
-}
-
-
-.productosPrincipal{
+    align-content: none;
+    gap: none;
     position: relative;
-    text-align: center;
-    padding: 0;
-}
+    height: 100%; }
+    .main .segundoCuerpo div img {
+      width: 100%;
+      height: 85%;
+      border-radius: 10%;
+      margin-right: 2rem; }
+    .main .segundoCuerpo div a {
+      padding: .625rem 1.25rem;
+      border-style: solid;
+      border-color: white;
+      border-width: 0.1563;
+      text-decoration: none;
+      font-family: "Roboto", sans-serif;
+      background-color: #f4f4f4;
+      color: black; }
+    .main .segundoCuerpo div .button {
+      position: absolute;
+      bottom: 10%;
+      display: inline-block;
+      padding: 2.5% 25%;
+      border-radius: 1.5625rem;
+      opacity: 0.75;
+      transition: opacity 0.3s;
+      margin-right: 2rem; }
+      .main .segundoCuerpo div .button:hover {
+        opacity: 1; }
 
-.imagenes-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    justify-content: center;
-    margin-top: 0;
-}
-
-.imagenes-container img{
-    width: calc(30% - .375rem);
-    height: 100%;
-    flex-grow: 1;
-}
-
-.productosPrincipal h1{
+.productosPrincipal {
+  position: relative;
+  text-align: center;
+  padding: 0; }
+  .productosPrincipal h1 {
+    font-family: "Aleo", serif;
+    background-color: #84848485;
+    color: #f4f4f4;
     position: absolute;
     top: 1rem;
     left: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-size: 1.25rem;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.1);
-}
-
-.productosPrincipal h2{
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); }
+  .productosPrincipal h2 {
+    text-align: right;
+    font-family: "Aleo", serif;
+    background-color: #84848485;
+    color: #f4f4f4;
     position: absolute;
     bottom: 5rem;
     right: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-size: 1.25rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.productosPrincipal a{
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); }
+  .productosPrincipal a {
+    text-decoration: none;
+    font-family: "Aleo", serif;
+    background-color: #f4f4f4;
+    color: black;
     position: absolute;
     bottom: 1rem;
     right: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s;
-    font-size: 1rem;
-}
-.productosPrincipal a:hover{
-    background-color: #333;
-    color: #fff;
-}
-
-
-.productosIntermedio{
-    padding: 1.5rem;
-}
-.productosIntermedio h3{
-    font-size: 1.75rem;
-    border-top: 2px solid #000000;
-    border-bottom: 2px solid #000000;
-    padding: 1rem 0;
-}
-
-
-.productosFinal{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    font-size: 1rem; }
+    .productosPrincipal a:hover {
+      background-color: #333;
+      color: white; }
+  .productosPrincipal .imagenes-container {
+    display: flex;
+    flex-direction: none;
+    flex-wrap: wrap;
+    flex-flow: none;
+    justify-content: center;
+    align-items: none;
+    align-content: none;
     gap: 0;
-}
+    margin-top: 0; }
+    .productosPrincipal .imagenes-container img {
+      width: calc(30% - 0.375rem);
+      flex-grow: 1; }
 
-.productosFinal div{
-    position: relative;
-    width: 100%;
-}
-.productosFinal img{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
-.productosFinal .botonComprar{
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #f4f4f4;
-    color: black;
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    padding: 0.75rem 5rem;
-    border: .0625rem;
-    border-radius: 1.5rem;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-.productosFinal .botonComprar:hover{
+.productosIntermedio {
+  padding: 1.5rem;
+  text-align: center;
+  font-family: "Aleo", serif;
+  background-color: #848484;
+  color: #f4f4f4; }
+  .productosIntermedio h3 {
+    padding: 1rem 0;
+    border-top: 0.125rem solid black;
+    border-bottom: 0.125rem solid black;
+    font-size: 1.75rem; }
+
+.productosFinal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0; }
+
+.productosFinal div {
+  position: relative;
+  width: 100%; }
+
+.productosFinal img {
+  width: 100%;
+  height: 100%;
+  margin: 0; }
+
+.botonComprar {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f4f4f4;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 5rem;
+  border: 0.0625rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; }
+  .botonComprar:hover {
     background-color: #363636;
-    color: #fff;
-}
-
-
-
-.clienteGlobal1{
-    position: relative;
-    padding: 2rem;
-    z-index: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 0;
-    padding: 1rem;
-    border-radius: 0;
-    position: relative;
-    z-index: 2;
-    gap: 1.5rem;
-}
-
-.clienteGlobal2{
-    position: relative;
-    padding: 2rem;
-    z-index: 1;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin-bottom: 0;
-    padding: 1rem;
-    border-radius: 0;
-    position: relative;
-    z-index: 2;
-    gap: 1.5rem;
-}
-
-.clienteGlobal1 img, .clienteGlobal2 img{
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 1rem;
-}
-
-.clienteCuadro{
-    padding: 6rem;
-    border-radius: 5rem;
-    flex: 1;
-    font-family: "Roboto", sans-serif;
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-.nombreCliente{
-    font-weight: bold;
-    font-size: 1.375rem;
-    margin-bottom: 0.5rem;
-    color: black;
-    font-family: "Aleo", serif;
-}
-
-.clienteGlobal1 {
-    background-color: #BA9D79;
-}
-.clienteGlobal2{
-    background-color: #E3CDAE;
-}
-.clienteCuadro{
-    background-color: #f4f4f4;
-}
-.opinionCliente{
-    color: black;
-    font-family: "Roboto", sans-serif;
-}
-
-
-
-.emprendedorCuadro{
-    background-color: #f4f4f4ab;
-}
-.nombreEmprendedor{
-    color: black;
-    font-family: "Aleo", serif;
-}
-.sobreEmprendedor{
-    color: black;
-    font-family: "Roboto", sans-serif;
-}
-
-
-.container{
-    position: relative;
-}
-
-.section-emprendedores{
-    position: relative;
-    padding: 2rem;
-    z-index: 1;
-}
-
-.emprendedorGlobal1{
-    position: relative;
-    padding: 2rem;
-    z-index: 2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    position: relative;
-    gap: 5rem;
-}
-.emprendedorGlobal2{
-    position: relative;
-    padding: 2rem;
-    z-index: 2;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border-radius: 1rem;
-    position: relative;
-    gap: 5rem;
-}
-
-.emprendedorGlobal1 img{
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 0;
-    margin-left: 1rem;
-}
-.emprendedorGlobal2 img{
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 1rem;
-    margin-left: 0;
-}
-
-.emprendedorCuadro1, .emprendedorCuadro2{
-    padding: 3rem;
-    border-radius: 5rem;
-    flex: 1;
-    font-family: "Roboto", sans-serif;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    background-color: #f4f4f4ab;
-}
-
-.nombreEmprendedor1, .nombreEmprendedor2{
-    font-weight: bold;
-    font-size: 1.375rem;
-    margin-bottom: 0.5rem;
-    color: black;
-    font-family: "Aleo", serif;
-}
-
-.sobreEmprendedor1, .sobreEmprendedor2{
-    color: black;
-    font-family: "Roboto", sans-serif;
-}
-
-
-.section-sobre-nosotros{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    display: flex;
-}
-
-.section-sobre-nosotros img{
-    width: 33.33%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-
-.campoContacto1{
-    background-color: #E3CDAE;
-}
-.campoContacto1 h4{
-    color: black;
-    font-family: "Aleo", serif;
-    text-align: center;
-}
-.cuadroContacto{
-    background-color: #BA9D79;
-}
-.datosContacto{
-    background-color: #f4f4f4;
-    color: black;
-    font-family: "Roboto", sans-serif;
-    list-style: none;
-}
-.camposIngreso{
-    color: black;
-    font-family: "Roboto", sans-serif;
-}
-.camposIngreso input{
-    background-color: #f4f4f4;
-}
-
-
-.campoContacto2{
-    background-color: #E3CDAE;
-}
-.campoContacto2 h4{
-    color: black;
-    font-family: "Aleo", serif;
-    text-align: center;
-}
-
-
-.contenedor{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.25rem;
-    background-color: #BA9D79;
-}
-
-.campoContacto1,
-.campoContacto2{
-    flex: 1;
-    padding: 1.25rem;
-    border-radius: .9375rem;
-    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
-    margin: .625rem;
-}
-
-.campoContacto1 h4,
-.campoContacto2 h4{
-    text-align: center;
-    margin-bottom: 1.25rem;
-    font-size: 1.5rem;
-}
-
-.cuadroContacto{
-    padding: 1.25rem;
-    border-radius: .9375rem;
-}
-
-.datosContacto{
-    list-style: none;
-    padding: .3125rem;
-    border-radius: .9375rem;
-}
-.datosContacto li{
-    margin-bottom: .625rem;
-}
-
-.camposIngreso{
-    display: flex;
-    flex-wrap: wrap;
-    gap: .625rem;
-    padding: .625rem;
-}
-
-.camposIngreso input[type="text"],
-.camposIngreso input[type="email"],
-.camposIngreso input[type="nombre"],
-.camposIngreso textarea{
-    flex: 1 1 50%;
-    padding: .625rem;
-    margin-bottom: .625rem;
-    border: .0625rem solid #ccc;
-    border-radius: .3125rem;
-    font-family: "Roboto", sans-serif;
-}
-
-.camposIngreso input[type="submit"]{
-    flex: 1 1 100%;
-    padding: .625rem;
-    background-color: #E3CDAE;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: .3125rem;
-    cursor: pointer;
-    font-family: "Roboto", sans-serif;
-}
-
-iframe{
-    width: 100%;
-    height: 39.0625rem;
-    border: none;
-    border-radius: .9375rem;
-}
-
-
-.footerGlobal{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1.25rem;
-    flex-wrap: wrap;
-}
-
-.footerGlobal dl{
-    margin-bottom: 1.25rem;
-}
-
-.footerGlobal dl dt{
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.footerGlobal dl dd{
-    margin: .3125rem 0;
-    font-size: 0.75rem;
-}
-
-.footerGlobal div{
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.25rem;
-}
-
-.footerGlobal div p{
-    margin-right: .625rem;
-    font-size: 1rem;
-}
-
-.footerGlobal div img{
-    width: 1.5rem;
-    height: auto;
-    margin-right: .625rem;
-}
-
-.footerGlobal form{
-    display: flex;
-    align-items: center;
-    max-width: 100%;
-}
-
-.footerGlobal form label,
-.footerGlobal form input[type="email"],
-.footerGlobal form input[type="sumbit"]{
-    margin-right: .625rem;
-    font-size: 1rem;
-}
-
-.footerGlobal form input[type="email"]{
-    width: 100%;
-    height: 100%;
-}
-.footerGlobal form input[type="sumbit"]{
-    width: 3rem;
-    height: 3rem;
-}
-
-.footerGlobal{
-    background-color: #f4f4f4;
-    font-family: "Aleo", serif;
-    color: black;
-}
-.footerGlobal dd{
-    color: #848484;
-    font-family: "Roboto", sans-serif;;
-}
-
-
-
-
-
-@media (min-width: 1441px){
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    
-    
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #848484;
-        margin: 0;
-        color: white;
-    }
-    
-    
-    .navbar{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #E3CDAE;
-        padding: 0 0;
-        width: 100%;
-        margin: 0;
-    }
-    
-    .navbar-logo a{
-        margin-bottom: 3rem;
-        color: #f4f4f4;
-        font-size: 1.5rem;
-        text-decoration: none;
-    }
-    
-    .navbar-logo img{
-        width: 7rem;
-        height: 7rem;
-        margin: .625rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    
-    .navbar-menu{
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        background-color: white;
-        color: black;
-        font-family: "Aleo", serif;
-        text-decoration: none;
-        width: 100%;
-        padding: .625rem;
-    }
-    
-    .navbar-item{
-        flex: 1;
-        text-align: center;
-    }
-    .navbar-item a{
-        display: block;
-        color: #84848485;
-        text-decoration: none;
-        font-size: 1.15rem;
-        padding: 0.75rem 1.5rem;
-        background-color: white;
-        border: 2px solid white;
-        border-radius: 1.25rem;
-        border-width: .2188rem;
-        padding: .3125rem;
-        max-width: 15rem;
-        margin: 0 auto;
-        border-color: #848484;
-        transition: background-color 0.3s, border-color 0.3, color 0.3s;
-    }
-    .navbar-item a:hover{
-        background-color: #f4f4f4;
-        border-color: black;
-        color: black;
-    }
-    .navbar .active{
-        background-color: white;
-        border-color: black;
-        color: black;
-    }
-    
-    
-    
-    .primerCuerpo{
-        background-color: #E3CDAE;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: .625rem;
-        align-items: center;
-    }
-    
-    .segundoCuerpo{
-        background-color: #BA9D79;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
-        gap: 1.25rem;
-    }
-    .segundoCuerpo p{
-        margin: 2rem;
-        font-size: 2rem;
-        line-height: 1.15;
-        max-height: 85%;
-        overflow-y: auto;
-        margin-left: 6.25rem;
-    }
-    
-
-    .inicioProductos a{
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-style: solid;
-        border-color: white;
-        border-width: .1563rem;
-    }
-    
-    .logo{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .logo img{
-        width: 30%;
-        height: 30%;
-        border-radius: 50%;
-        opacity: 0.75;
-    }
-    
-    .images{
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-    .images img{
-        width: 100%;
-        height: auto;
-    }
-    
-    
-    
-    .inicioProductos{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    .inicioProductos img{
-        width: 100%;
-        height: 85%;
-        border-radius: 10%;
-    }
-    .inicioProductos .button{
-        position: absolute;
-        bottom: 10%;
-        display: inline-block;
-        padding: 2.5% 15%;
-        border-radius: 2.5rem;
-        opacity: 0.75;
-        transition: opacity 0.3s;
-        font-size: 1.75rem;
-    }
-    .inicioProductos .button:hover{
-        opacity: 1;
-    }
-
-
-    .productosPrincipal h1{
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        font-size: 1.75rem;
-        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.1);
-    }
-    .productosPrincipal h2{
-        position: absolute;
-        bottom: 5rem;
-        right: 1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        font-size: 1.75rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .productosPrincipal a{
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s, color 0.3s;
-        font-size: 1.5rem;
-    }
-    .productosPrincipal a:hover{
-        background-color: #333;
-        color: #fff;
-    }
-    
-    .productosIntermedio{
-        padding: 1.5rem;
-    }
-    .productosIntermedio h3{
-        font-size: 1.75rem;
-        border-top: 2px solid #000000;
-        border-bottom: 2px solid #000000;
-        padding: 1rem 0;
-    }
-    
-    
-    .productosFinal{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0;
-    }
-    .productosFinal div{
-        position: relative;
-        width: 100%;
-    }
-    .productosFinal img{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-    .productosFinal .botonComprar{
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 1.4rem;
-        padding: 0.75rem 5rem;
-        border: .0625rem;
-        border-radius: 1.5rem;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    .productosFinal .botonComprar:hover{
-        background-color: #363636;
-        color: #fff;
-    }
-
-
-
-    .clienteGlobal1{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 5rem;
-    }
-    
-    .clienteGlobal1 img{
-        width: 25rem;
-        height: 25rem;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 1rem;
-    }
-    
-    .clienteGlobal2{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 5rem;
-    }
-    
-    .clienteGlobal2 img{
-        width: 25rem;
-        height: 25rem;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 1rem;
-    }
-    
-    .clienteCuadro{
-        padding: 6rem;
-        border-radius: 5rem;
-        flex: 1;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .nombreCliente{
-        font-weight: bold;
-        font-size: 1.75rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .clienteGlobal1 {
-        background-color: #BA9D79;
-    }
-    .clienteGlobal2{
-        background-color: #E3CDAE;
-    }
-    .clienteCuadro{
-        background-color: #f4f4f4;
-    }
-    .nombreCliente {
-        color: black;
-        font-family: "Aleo", serif;
-    }
-    .opinionCliente{
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 1.25rem;
-    }
-
-
-
-    .emprendedorCuadro{
-        background-color: #f4f4f4ab;
-    }
-    .nombreEmprendedor{
-        color: black;
-        font-family: "Aleo", serif;
-    }
-    .sobreEmprendedor{
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    
-    .container{
-        position: relative;
-    }
-    
-    .section-emprendedores{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-    }
-    
-    .emprendedorGlobal1{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 2rem;
-        padding: 1rem;
-        border-radius: 1rem;
-        position: relative;
-        z-index: 2;
-        gap: 1.5rem;
-    }
-    .emprendedorGlobal2{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        margin-bottom: 2rem;
-        padding: 1rem;
-        border-radius: 1rem;
-        position: relative;
-        z-index: 2;
-        gap: 1.5rem;
-    }
-    
-    .emprendedorGlobal1 img{
-        width: 25rem;
-        height: 25rem;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 0;
-        margin-right: 1rem;
-    }
-    .emprendedorGlobal2 img{
-        width: 25rem;
-        height: 25rem;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 1rem;
-        margin-right: 0;
-    }
-    
-    .emprendedorCuadro1, .emprendedorCuadro2{
-        padding: 5rem;
-        border-radius: 5rem;
-        flex: 1;
-        font-family: "Roboto", sans-serif;
-        font-size: 1.5rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        background-color: #f4f4f4ab;
-    }
-
-    .nombreEmprendedor1, .nombreEmprendedor2{
-        font-weight: bold;
-        font-size: 1.75rem;
-        margin-bottom: 0.5rem;
-        color: black;
-        font-family: "Aleo", serif;
-    }
-    
-    .sobreEmprendedor1, .sobreEmprendedor2{
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .section-sobre-nosotros{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        display: flex;
-    }
-    
-    .section-sobre-nosotros img{
-        width: 33.33%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-
-
-    .contenedor{
-        display: flex;
-        justify-content: space-between;
-        padding: 1.25rem;
-        background-color: #BA9D79;
-    }
-
-    .campoContacto1, .campoContacto2{
-        background-color: #E3CDAE;
-        flex: 1;
-        padding: 1.25rem;
-        border-radius: .9375rem;
-        box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
-        margin: .625rem;
-    }
-    .campoContacto1 h4, .campoContacto2 h4{
-        color: black;
-        font-family: "Aleo", serif;
-        text-align: center;
-        text-align: center;
-        margin-bottom: 1.25rem;
-        font-size: 2.5rem;
-    }
-    .datosContacto li{
-        margin-bottom: .625rem;
-    }
-    .cuadroContacto{
-        background-color: #BA9D79;
-        padding: 1.25rem;
-        border-radius: .9375rem;
-    }
-    .datosContacto{
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 1.5rem;
-        list-style: none;
-        list-style: none;
-        padding: .3125rem;
-        border-radius: .9375rem;
-    }
-    .camposIngreso{
-        color: black;
-        font-family: "Roboto", sans-serif;
-        display: flex;
-        flex-wrap: wrap;
-        gap: .625rem;
-        padding: .625rem;
-    }
-    .camposIngreso input{
-        background-color: #f4f4f4;
-    }
-    
-    .camposIngreso input[type="text"],
-    .camposIngreso input[type="email"],
-    .camposIngreso input[type="nombre"],
-    .camposIngreso textarea{
-        flex: 1 1 50%;
-        padding: .625rem;
-        margin-bottom: .625rem;
-        border: .0625rem solid #ccc;
-        border-radius: .3125rem;
-        font-size: 1.5rem;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .camposIngreso input[type="submit"]{
-        flex: 1 1 100%;
-        padding: .625rem;
-        background-color: #E3CDAE;
-        color: rgb(0, 0, 0);
-        border: none;
-        border-radius: .3125rem;
-        cursor: pointer;
-        font-size: 1.5rem;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    iframe{
-        width: 100%;
-        height: 58rem;
-        border: none;
-        border-radius: .9375rem;
-    }
-
-
-
-    .footerGlobal{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 1.25rem;
-        flex-wrap: wrap;
-        font-size: x-large;
-    }
-    
-    .footerGlobal dl{
-        margin-bottom: 1.25rem;
-    }
-    
-    .footerGlobal dl dt{
-        font-weight: bold;
-    }
-    
-    .footerGlobal dl dd{
-        margin: .3125rem 0;
-    }
-    
-    .footerGlobal div{
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.25rem;
-    }
-    
-    .footerGlobal div p{
-        margin-right: .625rem;
-    }
-    
-    .footerGlobal div img{
-        max-width: 2.1875rem;
-        height: auto;
-        margin-right: .625rem;
-    }
-    
-    .footerGlobal form{
-        display: flex;
-        align-items: center;
-        max-width: 100%;
-    }
-    
-    .footerGlobal form label,
-    .footerGlobal form input[type="email"],
-    .footerGlobal form input[type="sumbit"]{
-        margin-right: .625rem;
-    }
-    .footerGlobal form input[type="email"]{
-        width: 30rem;
-        height: 1.5rem;
-    }
-    .footerGlobal form input[type="sumbit"]{
-        width: 3rem;
-        height: 3rem;
-    }
-    
-    .footerGlobal{
-        background-color: #f4f4f4;
-        font-family: "Aleo", serif;
-        color: black;
-    }
-    .footerGlobal dd{
-        color: #848484;
-        font-family: "Roboto", sans-serif;;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px){
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #848484;
-        margin: 0;
-        color: white;
-    }
-    
-    
-    .navbar{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #E3CDAE;
-        padding: 0 0;
-        width: 100%;
-        margin: 0;
-    }
-    
-    .navbar-logo a{
-        margin-bottom: 1rem;
-        color: #f4f4f4;
-        font-size: 1.5rem;
-        text-decoration: none;
-    }
-    
-    .navbar-logo img{
-        width: 5.25rem;
-        height: 5.25rem;
-        margin: .3125rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    
-    .navbar-menu{
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        background-color: white;
-        color: black;
-        font-family: "Aleo", serif;
-        text-decoration: none;
-        width: 100%;
-        padding: .625rem;
-    }
-    
-    .navbar-item{
-        margin: 0 0.5rem;
-        flex: 1;
-        text-align: center;
-    }
-    .navbar-item a{
-        display: block;
-        color: #84848485;
-        text-decoration: none;
-        font-size: 0.75rem;
-        padding: 0.75rem 1.5rem;
-        background-color: white;
-        border: .0625rem solid white;
-        border-radius: 1.25rem;
-        border-width: .1875rem;
-        padding: .3125rem;
-        max-width: 15rem;
-        margin: 0 auto;
-        border-color: #848484;
-        transition: background-color 0.3s, border-color 0.3, color 0.3s;
-    }
-    .navbar-item a:hover{
-        background-color: #f4f4f4;
-        border-color: black;
-        color: black;
-    }
-    .navbar .active{
-        background-color: white;
-        border-color: black;
-        color: black;
-    }
-    
-    
-    
-    .primerCuerpo{
-        background-color: #E3CDAE;
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .segundoCuerpo{
-        background-color: #BA9D79;
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .inicioProductos a{
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-style: solid;
-        border-color: white;
-        border-width: .1563rem;
-    
-    }
-    
-    
-    
-    .primerCuerpo{
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: .625rem;
-        align-items: center;
-    }
-    
-    
-    .logo{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .logo img{
-        width: 30%;
-        height: 30%;
-        border-radius: 50%;
-        opacity: 0.75;
-    }
-    
-    .images{
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .images img{
-        width: 100%;
-        height: auto;
-    }
-    
-    
-    
-    .segundoCuerpo{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
-        gap: 1.25rem;
-    }
-    
-    
-    .segundoCuerpo p{
-        margin: 2.1875rem;
-        font-size: 1rem;
-        line-height: 1.15;
-        max-height: 85%;
-        overflow-y: auto;
-        margin-left: 6.25rem;
-    }
-    
-    
-    .inicioProductos{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    
-    
-    .inicioProductos img{
-        width: 100%;
-        height: 85%;
-        border-radius: 10%;
-    }
-    
-    
-    .inicioProductos .button{
-        position: absolute;
-        bottom: 10%;
-        display: inline-block;
-        padding: 2.5% 15%;
-        border-radius: 1.5625rem;
-        opacity: 0.75;
-        transition: opacity 0.3s;
-    }
-    
-    .inicioProductos .button:hover{
-        opacity: 1;
-    }
-
-
-
-    .clienteGlobal1{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 1.5rem;
-    }
-    .clienteGlobal2{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 1.5rem;
-    }
-
-    .clienteGlobal1 img, .clienteGlobal2 img{
-        width: 10rem;
-        height: 10rem;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 0;
-        margin-left: 1rem;
-    }
-
-    .clienteCuadro{
-        padding: 3rem;
-        border-radius: 5rem;
-        flex: 1;
-        font-family: "Roboto", sans-serif;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-    
-    .nombreCliente{
-        font-weight: bold;
-        font-size: 1.375rem;
-        margin-bottom: 0.5rem;
-        color: black;
-        font-family: "Aleo", serif;
-    }
-    
-    .clienteGlobal1 {
-        background-color: #BA9D79;
-    }
-    .clienteGlobal2{
-        background-color: #E3CDAE;
-    }
-    .clienteCuadro{
-        background-color: #f4f4f4;
-    }
-    .opinionCliente{
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-
-
-
-    .emprendedorCuadro{
-        background-color: #f4f4f4ab;
-    }
-    .nombreEmprendedor{
-        color: black;
-        font-family: "Aleo", serif;
-    }
-    .sobreEmprendedor{
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    
-    .container{
-        position: relative;
-    }
-    
-    .section-emprendedores{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-    }
-    
-    .emprendedorGlobal1{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 1.5rem;
-    }
-    .emprendedorGlobal2{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 1.5rem;
-    }
-    
-    .emprendedorGlobal1 img{
-        width: 10rem;
-        height: 10rem;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 0;
-        margin-left: 1rem;
-    }
-    .emprendedorGlobal2 img{
-        width: 10rem;
-        height: 10rem;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-right: 1rem;
-        margin-left: 0;
-    }
-    
-    .emprendedorCuadro1, .emprendedorCuadro2{
-        padding: 3rem;
-        border-radius: 5rem;
-        flex: 1;
-        font-family: "Roboto", sans-serif;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        background-color: #f4f4f4ab;
-    }
-
-    .nombreEmprendedor1, .nombreEmprendedor2{
-        font-weight: bold;
-        font-size: 1.375rem;
-        margin-bottom: 0.5rem;
-        color: black;
-        font-family: "Aleo", serif;
-    }
-    
-    .sobreEmprendedor1, .sobreEmprendedor2{
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .section-sobre-nosotros{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        display: flex;
-    }
-    
-    .section-sobre-nosotros img{
-        width: 33.33%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-
-
-    .footerGlobal{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 1.25rem;
-        flex-wrap: wrap;
-        font-size: small;
-    }
-    
-    .footerGlobal dl{
-        margin-bottom: 1.25rem;
-    }
-    
-    .footerGlobal dl dt{
-        font-weight: bold;
-    }
-    
-    .footerGlobal dl dd{
-        margin: .3125rem 0;
-    }
-    
-    .footerGlobal div{
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.25rem;
-    }
-    
-    .footerGlobal div p{
-        margin-right: .625rem;
-    }
-    
-    .footerGlobal div img{
-        max-width: 1.5rem;
-        height: auto;
-        margin-right: .625rem;
-    }
-    
-    .footerGlobal form{
-        display: flex;
-        align-items: center;
-        max-width: 100%;
-    }
-    
-    .footerGlobal form label,
-    .footerGlobal form input[type="email"],
-    .footerGlobal form input[type="sumbit"]{
-        margin-right: .625rem;
-    }
-
-    .footerGlobal form input[type="email"]{
-        width: 100%;
-        height: 1.5rem;
-    }
-    .footerGlobal form input[type="sumbit"]{
-        width: 3rem;
-        height: 3rem;
-    }
-}
-
-@media (min-width: 425px) and (max-width: 768px){
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #848484;
-        margin: 0;
-        color: white;
-    }
-    
-    
-    .navbar{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #E3CDAE;
-        padding: 0 0;
-        width: 100%;
-        margin: 0;
-    }
-    
-    .navbar-logo a{
-        margin-bottom: 1rem;
-        color: #f4f4f4;
-        font-size: 1.5rem;
-        text-decoration: none;
-    }
-    
-    .navbar-logo img{
-        width: 3rem;
-        height: 3rem;
-        margin: .3125rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    
-    .navbar-menu{
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        background-color: white;
-        color: black;
-        font-family: "Aleo", serif;
-        text-decoration: none;
-        width: 100%;
-        padding: .625rem;
-    }
-    
-    .navbar-item{
-        flex: 1;
-        text-align: center;
-    }
-    .navbar-item a{
-        display: block;
-        color: #84848485;
-        text-decoration: none;
-        font-size: 0.70rem;
-        padding: 1rem 1rem;
-        background-color: white;
-        border: 2px solid white;
-        border-radius: 1.25rem;
-        border-width: .1563rem;
-        padding: .2188rem;
-        width: 4rem;
-        height: 2.5rem;
-        max-width: 15rem;
-        margin: 0 auto;
-        border-color: #848484;
-        transition: background-color 0.3s, border-color 0.3, color 0.3s;
-    }
-    .navbar-item a:hover{
-        background-color: #f4f4f4;
-        border-color: black;
-        color: black;
-    }
-    .navbar .active{
-        background-color: white;
-        border-color: black;
-        color: black;
-    }
-
-    .primerCuerpo{
-        background-color: #E3CDAE;
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .segundoCuerpo{
-        background-color: #BA9D79;
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .inicioProductos a{
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-style: solid;
-        border-color: white;
-        border-width: .1563rem;
-    
-    }
-    
-    
-    
-    .primerCuerpo{
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: .625rem;
-        align-items: center;
-    }
-    
-    
-    .logo{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .logo img{
-        width: 30%;
-        height: 30%;
-        border-radius: 50%;
-        opacity: 0.75;
-    }
-    
-    .images{
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .images img{
-        width: 100%;
-        height: auto;
-    }
-    
-    
-    
-    .segundoCuerpo{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
-        gap: 1.25rem;
-    }
-    
-    
-    .segundoCuerpo p{
-        margin: 1rem;
-        font-size: 0.5rem;
-        line-height: 0.85rem;
-        max-height: 100%;
-        overflow-y: auto;
-        margin-left: 2rem;
-    }
-    
-    
-    .inicioProductos{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    
-    
-    .inicioProductos img{
-        width: 110%;
-        height: 75%;
-        border-radius: 10%;
-    }
-    
-    
-    .inicioProductos .button{
-        position: absolute;
-        bottom: 15%;
-        display: inline-block;
-        padding: 2.5% 10%;
-        border-radius: 1.5625rem;
-        opacity: 0.75;
-        transition: opacity 0.3s;
-        font-size: 0.65rem;
-    }
-    
-    .inicioProductos .button:hover{
-        opacity: 1;
-    }
-
-
-    .productosPrincipal h1{
-        background-color: #84848485;
-        color: #f4f4f4;
-        font-family: "Aleo", serif;
-    }
-    .productosPrincipal h2{
-        background-color: #84848485;
-        color: #f4f4f4;
-        font-family: "Aleo", serif;
-        text-align: right;
-    }
-    .productosPrincipal a{
-        text-decoration: none;
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Aleo", serif;
-    }
-    
-    
-    .productosIntermedio{
-        background-color: #848484;
-        font-family: "Aleo", serif;
-        color: #f4f4f4;
-        text-align: center;
-    }
-    
-    
-    
-    .productosPrincipal{
-        position: relative;
-        text-align: center;
-        padding: 0;
-    }
-    
-    .imagenes-container{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0;
-        justify-content: center;
-        margin-top: 0;
-    }
-    
-    .imagenes-container img{
-        width: calc(30% - .375rem);
-        height: 100%;
-        flex-grow: 1;
-    }
-    
-    .productosPrincipal h1{
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        font-size: 1rem;
-        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.1);
-    }
-    
-    .productosPrincipal h2{
-        position: absolute;
-        bottom: 3rem;
-        right: 1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        font-size: 1rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .productosPrincipal a{
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        padding: 0.25rem 0.75rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s, color 0.3s;
-        font-size: 1rem;
-        height: 1.75rem;
-    }
-    .productosPrincipal a:hover{
-        background-color: #333;
-        color: #fff;
-    }
-    
-    
-    .productosIntermedio{
-        padding: 1.5rem;
-    }
-    .productosIntermedio h3{
-        font-size: 1rem;
-        border-top: 1.25px solid #000000;
-        border-bottom: 1px solid #000000;
-        padding: 0.25rem 1rem;
-        height: 1.75rem;
-    }
-    
-    
-    .productosFinal{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0;
-    }
-    
-    .productosFinal div{
-        position: relative;
-        width: 100%;
-    }
-    .productosFinal img{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-    .productosFinal .botonComprar{
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 1rem;
-        padding: 0.5rem 0.75rem;
-        border: .0625rem;
-        border-radius: 1.5rem;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    .productosFinal .botonComprar:hover{
-        background-color: #363636;
-        color: #fff;
-    }
-
-
-
-    .clienteGlobal1, .clienteGlobal2{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 1rem;
-    }
-    
-    .clienteGlobal1 img, .clienteGlobal2 img{
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    
-    .clienteCuadro{
-        padding: 6rem;
-        border-radius: 7rem;
-        flex: 1;
-        font-family: "Roboto", sans-serif;
-        background-color: #f4f4f4;
-        padding: 10%;
-    }
-    
-    .nombreCliente{
-        font-weight: bold;
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-        color: black;
-        font-family: "Aleo", serif;
-        text-align: center;
-    }
-    
-    .clienteGlobal1 {
-        background-color: #BA9D79;
-    }
-    .clienteGlobal2{
-        background-color: #E3CDAE;
-    }
-
-    .opinionCliente{
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 1rem;
-        text-align: center;
-    }
-
-
-
-    .emprendedorCuadro{
-        background-color: #f4f4f4ab;
-    }
-    .nombreEmprendedor{
-        color: black;
-        font-weight: bold;
-        font-size: 0.75rem;
-        margin-bottom: 0.5rem;
-    }
-    .sobreEmprendedor{
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 0.5rem;
-        text-align: center;
-    }
-    
-    .emprendedorGlobal1, .emprendedorGlobal2{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 1rem;
-    }
-    
-    .emprendedorGlobal1 img, .emprendedorGlobal2 img{
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    
-    .emprendedorCuadro1, .emprendedorCuadro2{
-        padding: 6rem;
-        border-radius: 7rem;
-        flex: 1;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .nombreEmprendedor1, .nombreEmprendedor2{
-        font-weight: bold;
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-        color: black;
-        font-family: "Aleo", serif;
-        text-align: center;
-    }
-    
-    .sobreEmprendedor1, .sobreEmprendedor2{
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 1rem;
-        text-align: center;
-    }
-    
-    .emprendedorCuadro1, .emprendedorCuadro2{
-        background-color: #f4f4f4ab;
-        padding: 6rem;
-        border-radius: 7rem;
-        flex: 1;
-        font-family: "Roboto", sans-serif;
-        padding: 10%;
-    }
-    
-    .section-sobre-nosotros{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .section-sobre-nosotros img{
-        width: 100%;
-        height: 33.5%;
-        object-fit: cover;
-    }
-
-
-
-    .contenedor{
-        display: flex;
-        flex-direction: column;
-        padding: 0.25rem;
-        background-color: #BA9D79;
-    }
-
-    
-    .campoContacto1,
-    .campoContacto2{
-        flex: 1;
-        padding: 1.25rem;
-        border-radius: .9375rem;
-        box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
-        margin: .625rem;
-        background-color: #E3CDAE;
-    }
-    
-    .campoContacto1 h4,
-    .campoContacto2 h4{
-        text-align: center;
-        margin-bottom: 1.25rem;
-        font-size: 1.25rem;
-        color: black;
-        font-family: "Aleo", serif;
-        text-align: center;
-    }
-    
-    .cuadroContacto{
-        padding: 1.25rem;
-        border-radius: 1rem;
-        background-color: #BA9D79;
-    }
-    
-    .datosContacto{
-        list-style: none;
-        padding: 0.25rem;
-        border-radius: 1rem;
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 0.75rem;
-        list-style: none;
-    }
-    .datosContacto li{
-        margin-bottom: 0.25;
-    }
-    
-    .camposIngreso{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.25;
-        padding: 0.25rem;
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .camposIngreso input{
-        background-color: #f4f4f4;
-    }
-    .camposIngreso input[type="text"],
-    .camposIngreso input[type="email"],
-    .camposIngreso input[type="nombre"],
-    .camposIngreso textarea{
-        display: flex;
-        flex: 1 1 50%;
-        flex-direction: column;
-        padding: 0.25rem;
-        margin-bottom: 0;
-        border: 0.05rem solid #ccc;
-        border-radius: .3125rem;
-        font-size: 0.75rem;
-        width: 100%;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .camposIngreso input[type="submit"]{
-        flex: 1 1 100%;
-        padding: .625rem;
-        background-color: #E3CDAE;
-        color: rgb(0, 0, 0);
-        border: none;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        font-size: 0.5rem;
-        font-family: "Roboto", sans-serif;
-
-    }
-    
-    iframe{
-        width: 100%;
-        height: 20rem;
-    }
-
-
-
-    .footerGlobal{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 1.25rem;
-        flex-wrap: wrap;
-        font-size: small;
-    }
-    
-    .footerGlobal dl{
-        margin-bottom: 1.25rem;
-    }
-    
-    .footerGlobal dl dt{
-        font-size: x-small;
-        font-weight: bold;
-    }
-    
-    .footerGlobal dl dd{
-        font-size: xx-small;
-        margin: .2188rem .1563rem;
-    }
-    
-    .footerGlobal div{
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.25rem;
-        font-size: x-small;
-    }
-    
-    .footerGlobal div p{
-        margin-right: .625rem;
-    }
-    
-    .footerGlobal div img{
-        max-width: 1.25rem;
-        height: auto;
-        margin-right: .625rem;
-    }
-    
-    .footerGlobal form{
-        display: flex;
-        align-items: center;
-        max-width: 100%;
-        font-size: x-small;
-    }
-    
-    .footerGlobal form label,
-    .footerGlobal form input[type="email"],
-    .footerGlobal form input[type="sumbit"]{
-        margin-right: .625rem;
-    }
-
-    .footerGlobal form input[type="email"]{
-        width: 100%;
-        height: 1rem;
-    }
-    .footerGlobal form input[type="sumbit"]{
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-}
-
-@media (max-width: 425px){
-    .header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #848484;
-        margin: 0;
-        color: white;
-    }
-    
-    
-    .navbar{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #E3CDAE;
-        padding: 0 0;
-        width: 100%;
-        margin: 0;
-    }
-    
-    .navbar-logo a{
-        margin-bottom: 1rem;
-        color: #f4f4f4;
-        font-size: 1.5rem;
-        text-decoration: none;
-    }
-    
-    .navbar-logo img{
-        width: 1.5rem;
-        height: 1.5rem;
-        margin: .3125rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    
-    .navbar-menu{
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        background-color: white;
-        color: black;
-        font-family: "Aleo", serif;
-        text-decoration: none;
-        width: 100%;
-        padding: .25rem;
-    }
-    
-    .navbar-item{
-        flex: 1;
-        text-align: center;
-    }
-    .navbar-item a{
-        display: block;
-        color: #84848485;
-        text-decoration: none;
-        font-size: .3125rem;
-        padding: 1rem 1rem;
-        background-color: white;
-        border: 2px solid white;
-        border-radius: 1.25rem;
-        border-width: .1563rem;
-        padding: .2188rem;
-        width: 3rem;
-        height: 1.50rem;
-        max-width: 15rem;
-        margin: 0 auto;
-        border-color: #848484;
-        transition: background-color 0.3s, border-color 0.3, color 0.3s;
-    }
-    .navbar-item a:hover{
-        background-color: #f4f4f4;
-        border-color: black;
-        color: black;
-    }
-    .navbar .active{
-        background-color: white;
-        border-color: black;
-        color: black;
-    }
-
-    .primerCuerpo{
-        background-color: #E3CDAE;
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .segundoCuerpo{
-        background-color: #BA9D79;
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .inicioProductos a{
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-style: solid;
-        border-color: white;
-        border-width: .1563rem;
-    
-    }
-    
-    
-    
-    .primerCuerpo{
-        position: relative;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: .625rem;
-        align-items: center;
-    }
-    
-    
-    .logo{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .logo img{
-        width: 30%;
-        height: 30%;
-        border-radius: 50%;
-        opacity: 0.75;
-    }
-    
-    .images{
-        grid-column: 1 / -1;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .images img{
-        width: 100%;
-        height: auto;
-    }
-    
-    
-    
-    .segundoCuerpo{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
-        gap: 1.25rem;
-    }
-    
-    
-    .segundoCuerpo p{
-        margin: 1rem;
-        font-size: 0.30rem;
-        line-height: 0.50rem;
-        max-height: 100%;
-        overflow-y: auto;
-        margin-left: 2rem;
-    }
-    
-    
-    .inicioProductos{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    }
-    
-    
-    .inicioProductos img{
-        width: 110%;
-        height: 65%;
-        border-radius: 10%;
-    }
-    
-    
-    .inicioProductos .button{
-        position: absolute;
-        bottom: 20%;
-        display: inline-block;
-        padding: 1.5% 5%;
-        border-radius: 1.5625rem;
-        opacity: 0.75;
-        transition: opacity 0.3s;
-        font-size: 0.35rem;
-    }
-    
-    .inicioProductos .button:hover{
-        opacity: 1;
-    }
-
-
-    .productosPrincipal h1{
-        background-color: #84848485;
-        color: #f4f4f4;
-        font-family: "Aleo", serif;
-    }
-    .productosPrincipal h2{
-        background-color: #84848485;
-        color: #f4f4f4;
-        font-family: "Aleo", serif;
-        text-align: right;
-    }
-    .productosPrincipal a{
-        text-decoration: none;
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Aleo", serif;
-    }
-    
-    
-    .productosIntermedio{
-        background-color: #848484;
-        font-family: "Aleo", serif;
-        color: #f4f4f4;
-        text-align: center;
-    }
-    
-    
-    
-    .productosPrincipal{
-        position: relative;
-        text-align: center;
-        padding: 0;
-    }
-    
-    .imagenes-container{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0;
-        justify-content: center;
-        margin-top: 0;
-    }
-    
-    .imagenes-container img{
-        width: calc(30% - .375rem);
-        height: 100%;
-        flex-grow: 1;
-    }
-    
-    .productosPrincipal h1{
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        font-size: 0.6rem;
-        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.1);
-    }
-    
-    .productosPrincipal h2{
-        position: absolute;
-        bottom: 3rem;
-        right: 1rem;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        font-size: 0.6rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    
-    .productosPrincipal a{
-        position: absolute;
-        bottom: 1rem;
-        right: 1rem;
-        padding: 0.25rem 0.75rem;
-        border-radius: 0.5rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s, color 0.3s;
-        font-size: 0.6rem;
-        height: 1.25rem;
-    }
-    .productosPrincipal a:hover{
-        background-color: #333;
-        color: #fff;
-    }
-    
-    
-    .productosIntermedio{
-        padding: 1.5rem;
-    }
-    .productosIntermedio h3{
-        font-size: 0.6rem;
-        border-top: 1px solid #000000;
-        border-bottom: 1px solid #000000;
-        padding: 0.5rem 0;
-        height: 1.75rem;
-    }
-    
-    
-    .productosFinal{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0;
-    }
-    
-    .productosFinal div{
-        position: relative;
-        width: 100%;
-    }
-    .productosFinal img{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-    .productosFinal .botonComprar{
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 0.5rem;
-        padding: 0.5rem 0.75rem;
-        border: .0625rem;
-        border-radius: 1.5rem;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-    }
-    .productosFinal .botonComprar:hover{
-        background-color: #363636;
-        color: #fff;
-    }
-
-
-
-    .clienteGlobal1, .clienteGlobal2{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 1rem;
-    }
-    
-    .clienteGlobal1 img, .clienteGlobal2 img{
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    
-    .clienteCuadro{
-        padding: 6rem;
-        border-radius: 5rem;
-        flex: 1;
-        font-family: "Roboto", sans-serif;
-        background-color: #f4f4f4;
-        padding: 10%;
-    }
-    
-    .nombreCliente{
-        font-weight: bold;
-        font-size: 0.75rem;
-        margin-bottom: 0.5rem;
-        color: black;
-        font-family: "Aleo", serif;
-        text-align: center;
-    }
-    
-    .clienteGlobal1 {
-        background-color: #BA9D79;
-    }
-    .clienteGlobal2{
-        background-color: #E3CDAE;
-    }
-
-    .opinionCliente{
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 0.5rem;
-        text-align: center;
-    }
-
-
-
-    .emprendedorCuadro{
-        background-color: #f4f4f4ab;
-    }
-    .nombreEmprendedor{
-        color: black;
-        font-weight: bold;
-        font-size: 0.75rem;
-        margin-bottom: 0.5rem;
-    }
-    .sobreEmprendedor{
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 0.5rem;
-        text-align: center;
-    }
-    
-    .emprendedorGlobal1, .emprendedorGlobal2{
-        position: relative;
-        padding: 2rem;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0;
-        padding: 1rem;
-        border-radius: 0;
-        position: relative;
-        z-index: 2;
-        gap: 1rem;
-    }
-    
-    .emprendedorGlobal1 img, .emprendedorGlobal2 img{
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-    
-    .emprendedorCuadro1, .emprendedorCuadro2{
-        padding: 6rem;
-        border-radius: 5rem;
-        flex: 1;
-        font-family: "Roboto", sans-serif;
-        background-color: #f4f4f4ab;
-        padding: 10%;
-    }
-    
-    .nombreEmprendedor1, .nombreEmprendedor2{
-        font-weight: bold;
-        font-size: 0.75rem;
-        margin-bottom: 0.5rem;
-        color: black;
-        font-family: "Aleo", serif;
-        text-align: center;
-    }
-    
-    .sobreEmprendedor1, .sobreEmprendedor2{
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 0.5rem;
-        text-align: center;
-    }
-    
-    .section-sobre-nosotros{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .section-sobre-nosotros img{
-        width: 100%;
-        height: 33.5%;
-        object-fit: cover;
-    }
-
-
-
-    .contenedor{
-        display: flex;
-        flex-direction: column;
-        padding: 0.25rem;
-        background-color: #BA9D79;
-    }
-
-    
-    .campoContacto1,
-    .campoContacto2{
-        flex: 1;
-        padding: 1.25rem;
-        border-radius: .9375rem;
-        box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
-        margin: .625rem;
-        background-color: #E3CDAE;
-    }
-    
-    .campoContacto1 h4,
-    .campoContacto2 h4{
-        text-align: center;
-        margin-bottom: 1.25rem;
-        font-size: 1rem;
-        color: black;
-        font-family: "Aleo", serif;
-        text-align: center;
-    }
-    
-    .cuadroContacto{
-        padding: 1.25rem;
-        border-radius: 1rem;
-        background-color: #BA9D79;
-    }
-    
-    .datosContacto{
-        list-style: none;
-        padding: 0.25rem;
-        border-radius: 1rem;
-        background-color: #f4f4f4;
-        color: black;
-        font-family: "Roboto", sans-serif;
-        font-size: 0.5rem;
-        list-style: none;
-    }
-    .datosContacto li{
-        margin-bottom: 0.25;
-    }
-    
-    .camposIngreso{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.25;
-        padding: 0.25rem;
-        color: black;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .camposIngreso input{
-        background-color: #f4f4f4;
-    }
-    .camposIngreso input[type="text"],
-    .camposIngreso input[type="email"],
-    .camposIngreso input[type="nombre"],
-    .camposIngreso textarea{
-        display: flex;
-        flex: 1 1 50%;
-        flex-direction: column;
-        padding: 0.25rem;
-        margin-bottom: 0;
-        border: 0.05rem solid #ccc;
-        border-radius: .3125rem;
-        font-size: 0.5rem;
-        width: 100%;
-        font-family: "Roboto", sans-serif;
-    }
-    
-    .camposIngreso input[type="submit"]{
-        flex: 1 1 100%;
-        padding: .625rem;
-        background-color: #E3CDAE;
-        color: rgb(0, 0, 0);
-        border: none;
-        border-radius: 0.5rem;
-        cursor: pointer;
-        font-size: 0.5rem;
-        font-family: "Roboto", sans-serif;
-
-    }
-    
-    iframe{
-        width: 100%;
-        height: 20rem;
-    }
-
-
-
-    .footerGlobal{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 1.25rem;
-        flex-wrap: wrap;
-        font-size: small;
-    }
-    
-    .footerGlobal dl{
-        margin-bottom: 0.5rem;
-    }
-    
-    .footerGlobal dl dt{
-        font-size: .4375rem;
-        font-weight: bold;
-    }
-    
-    .footerGlobal dl dd{
-        font-size: .2813rem;
-        margin: .2188rem .1563rem;
-    }
-    
-    .footerGlobal div{
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.25rem;
-        font-size: .4375rem;
-        font-weight: bold;
-    }
-    
-    .footerGlobal div p{
-        font-size: .4375rem;
-        margin-right: .2813rem;
-    }
-    
-    .footerGlobal div img{
-        max-width: .625rem;
-        height: auto;
-        margin-right: .625rem;
-    }
-    
-    .footerGlobal form{
-        display: flex;
-        align-items: center;
-        max-width: 100%;
-        font-size: .4375rem;
-        font-weight: bold;
-    }
-    
-    .footerGlobal form label,
-    .footerGlobal form input[type="email"],
-    .footerGlobal form input[type="sumbit"]{
-        margin-right: .625rem;
-        font-size: .4375rem;
-    }
-
-    .footerGlobal form input[type="email"]{
-        width: 100%;
-        height: .5rem;
-    }
-    .footerGlobal form input[type="sumbit"]{
-        width: .25rem;
-        height: .25rem;
-        font-size: .25rem;
-    }
-}
+    color: white; }
+
+/*Cuarto llamar a los componentes*/
+/*Ultimo llamar a los Mediaquerry
+Si son Desktop First van en orden decreciente
+Si son Mobile First van en orden creciente*/

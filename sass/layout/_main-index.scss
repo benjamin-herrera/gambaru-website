@@ -1,0 +1,77 @@
+.main{
+    .primerCuerpo{
+        @include grid(repeat (3, 1fr), none, none, center, none, none, 0.625rem);
+        font-family: $tipografia-b;
+        background-color: $color-principal;
+        color: $color-negro;
+        position: relative;
+        .logo{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            @include flex(none, none, none, center, center, none, none);
+            img{
+                @include imagen-circulo(30%, 30%, none);
+                opacity: 0.75;
+            }
+        }
+        .images{
+            @include grid(repeat(3, 1fr), none, none, none, none, none, none);
+            grid-column: 1 / -1;
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .segundoCuerpo{
+        @include grid(2fr 1fr, none, none, center, none, none, 1.25rem);
+        font-family: $tipografia-b;
+        background-color: $color-secundario;
+        color: $color-negro;
+        p{
+            margin: 2.1875rem;
+            margin-left: 6.25rem;
+            line-height: 1.15;
+            max-height: 85%;
+            overflow-y: auto;
+            font-size: 1.15rem;
+        }
+        div{
+            @include flex(none, none, none, center, center, none, none);
+            position: relative;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 85%;
+                border-radius: 10%;
+                margin-right: 2rem;
+            }
+            a{
+                padding: .625rem 1.25rem;
+                border-style: solid;
+                border-color: $color-blanco;
+                border-width: 0.1563;
+                text-decoration: none;
+                font-family: $tipografia-b;
+                background-color: $color-blanco-2;
+                color: $color-negro;
+            }
+            .button{
+                position: absolute;
+                bottom: 10%;
+                display: inline-block;
+                padding: 2.5% 25%;
+                border-radius: 1.5625rem;
+                opacity: 0.75;
+                transition: opacity 0.3s;
+                margin-right: 2rem;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

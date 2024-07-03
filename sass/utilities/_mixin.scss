@@ -1,0 +1,28 @@
+@mixin flex($flexdirection, $flexwrap, $flexflow, $justifycontent, $alingitems, $alingcontent, $gap){
+    display: flex;
+    flex-direction: $flexdirection;
+    flex-wrap: $flexwrap;
+    flex-flow: $flexflow;
+    justify-content: $justifycontent;
+    align-items: $alingitems;
+    align-content: $alingcontent;
+    gap: $gap;
+}
+
+@mixin grid($templatecolumns, $templaterow, $templateareas, $alignitems, $columngap, $rowgap, $gap){
+    display: grid;
+    grid-template-columns: $templatecolumns;
+    grid-template-rows: $templaterow;
+    grid-template-areas: $templateareas;
+    align-items: $alignitems;
+    column-gap: $columngap;
+    row-gap: $rowgap;
+    gap: $gap;
+}
+
+@mixin imagen-circulo($width, $height, $margin){
+    width: $width;
+    height: $height;
+    margin: $margin;
+    border-radius: 50%;
+}
