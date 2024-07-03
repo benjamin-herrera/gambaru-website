@@ -27,21 +27,21 @@
         }
     }
     .segundoCuerpo{
-        @include grid(2fr 1fr, none, none, center, none, none, 1.25rem);
-        font-family: $tipografia-b;
         background-color: $color-secundario;
         color: $color-negro;
+        font-family: $tipografia-b;
+        @include grid(2fr 1fr, none, none, center, none, none, 1.25rem);
         p{
             margin: 2.1875rem;
-            margin-left: 6.25rem;
+            font-size: 1.15rem;
             line-height: 1.15;
             max-height: 85%;
             overflow-y: auto;
-            font-size: 1.15rem;
+            margin-left: 6.25rem;
         }
         div{
-            @include flex(none, none, none, center, center, none, none);
             position: relative;
+            @include flex(none, none, none, center, center, none, none);
             height: 100%;
             img{
                 width: 100%;
@@ -50,28 +50,30 @@
                 margin-right: 2rem;
             }
             a{
+                background-color: $color-blanco-2;
+                color: $color-negro;
+                font-family: $tipografia-b;
+                text-decoration: none;
                 padding: .625rem 1.25rem;
                 border-style: solid;
                 border-color: $color-blanco;
-                border-width: 0.1563;
-                text-decoration: none;
-                font-family: $tipografia-b;
-                background-color: $color-blanco-2;
-                color: $color-negro;
-            }
-            .button{
-                position: absolute;
-                bottom: 10%;
-                display: inline-block;
-                padding: 2.5% 25%;
-                border-radius: 1.5625rem;
-                opacity: 0.75;
-                transition: opacity 0.3s;
-                margin-right: 2rem;
-                &:hover{
-                    opacity: 1;
-                }
+                border-width: 0.1563rem;
             }
         }
+    }
+    
+    .inicioProductos .button{
+        position: absolute;
+        bottom: 10%;
+        display: inline-block;
+        padding: 2.5% 25%;
+        border-radius: 1.5625rem;
+        opacity: 0.75;
+        transition: opacity 0.3s;
+        margin-right: 2rem;
+    }
+    
+    .inicioProductos .button:hover{
+        opacity: 1;
     }
 }

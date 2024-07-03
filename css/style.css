@@ -31,8 +31,8 @@ font-family: "Roboto", sans-serif;
   align-content: none;
   gap: none;
   background-color: #848484;
-  color: white;
-  margin: 0; }
+  margin: 0;
+  color: white; }
   .header nav {
     display: flex;
     flex-direction: column;
@@ -42,15 +42,15 @@ font-family: "Roboto", sans-serif;
     align-items: center;
     align-content: none;
     gap: none;
+    background-color: #E3CDAE;
     padding: 0 0;
     width: 100%;
-    margin: 0;
-    background-color: #E3CDAE; }
+    margin: 0; }
     .header nav div a {
       margin-bottom: 1rem;
+      color: #f4f4f4;
       font-size: 1.5rem;
-      text-decoration: none;
-      color: #f4f4f4; }
+      text-decoration: none; }
     .header nav div img {
       width: 6.25rem;
       height: 6.25rem;
@@ -66,39 +66,40 @@ font-family: "Roboto", sans-serif;
       align-items: none;
       align-content: none;
       gap: none;
-      width: 100%;
-      padding: 0.625rem;
       list-style: none;
-      text-decoration: none;
-      font-family: "Aleo", serif;
       background-color: white;
-      color: black; }
+      color: black;
+      font-family: "Aleo", serif;
+      text-decoration: none;
+      width: 100%;
+      padding: 0.625rem; }
       .header nav ul li {
         flex: 1;
         text-align: center; }
         .header nav ul li a {
           display: block;
+          color: #84848485;
           text-decoration: none;
           font-size: 1rem;
           padding: 0.75rem 1.5rem;
+          background-color: white;
           border: 2px solid white;
           border-radius: 1.25rem;
-          border-width: 0.2031rem;
-          padding: 0.3125rem;
+          border-width: .2031rem;
+          padding: .3125rem;
           max-width: 15rem;
           margin: 0 auto;
-          background-color: white;
-          color: #84848485;
           border-color: #848484;
           transition: background-color 0.3s, border-color 0.3, color 0.3s; }
           .header nav ul li a:hover {
             background-color: #f4f4f4;
             border-color: black;
             color: black; }
-    .header nav .navbar .active {
-      background-color: white;
-      border-color: black;
-      color: black; }
+
+.navbar .active {
+  background-color: white;
+  border-color: black;
+  color: black; }
 
 .footerGlobal {
   display: flex;
@@ -111,18 +112,18 @@ font-family: "Roboto", sans-serif;
   gap: none;
   padding: 1.25rem;
   background-color: #f4f4f4;
-  color: black;
-  font-family: "Aleo", serif; }
+  font-family: "Aleo", serif;
+  color: black; }
   .footerGlobal dl {
     margin-bottom: 1.25rem; }
     .footerGlobal dl dt {
       font-size: 1rem;
       font-weight: bold; }
     .footerGlobal dl dd {
-      margin: 0.3125rem;
+      margin: 0.3125rem 0;
       font-size: 0.75rem;
-      font-size: "Roboto", sans-serif;
-      color: black; }
+      color: #848484;
+      font-family: "Roboto", sans-serif; }
   .footerGlobal div {
     display: flex;
     align-items: center;
@@ -134,19 +135,25 @@ font-family: "Roboto", sans-serif;
       width: 1.5rem;
       height: auto;
       margin-right: 0.625rem; }
-  .footerGlobal form {
-    display: flex;
-    align-items: center;
-    max-width: 100%; }
-    .footerGlobal form label, .footerGlobal form input[type="email"], .footerGlobal form input[type="sumbit"] {
-      margin-right: 0.625rem;
-      font-size: 1rem; }
-    .footerGlobal form input[type="email"] {
-      width: 100%;
-      height: 100%; }
-    .footerGlobal form input[type="sumbit"] {
-      width: 3rem;
-      height: 3rem; }
+
+.footerGlobal form {
+  display: flex;
+  align-items: center;
+  max-width: 100%; }
+
+.footerGlobal form label,
+.footerGlobal form input[type="email"],
+.footerGlobal form input[type="sumbit"] {
+  margin-right: .625rem;
+  font-size: 1rem; }
+
+.footerGlobal form input[type="email"] {
+  width: 100%;
+  height: 100%; }
+
+.footerGlobal form input[type="sumbit"] {
+  width: 3rem;
+  height: 3rem; }
 
 .main .primerCuerpo {
   display: grid;
@@ -196,6 +203,9 @@ font-family: "Roboto", sans-serif;
       height: auto; }
 
 .main .segundoCuerpo {
+  background-color: #BA9D79;
+  color: black;
+  font-family: "Roboto", sans-serif;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: none;
@@ -203,18 +213,16 @@ font-family: "Roboto", sans-serif;
   align-items: center;
   column-gap: none;
   row-gap: none;
-  gap: 1.25rem;
-  font-family: "Roboto", sans-serif;
-  background-color: #BA9D79;
-  color: black; }
+  gap: 1.25rem; }
   .main .segundoCuerpo p {
     margin: 2.1875rem;
-    margin-left: 6.25rem;
+    font-size: 1.15rem;
     line-height: 1.15;
     max-height: 85%;
     overflow-y: auto;
-    font-size: 1.15rem; }
+    margin-left: 6.25rem; }
   .main .segundoCuerpo div {
+    position: relative;
     display: flex;
     flex-direction: none;
     flex-wrap: none;
@@ -223,7 +231,6 @@ font-family: "Roboto", sans-serif;
     align-items: center;
     align-content: none;
     gap: none;
-    position: relative;
     height: 100%; }
     .main .segundoCuerpo div img {
       width: 100%;
@@ -231,25 +238,27 @@ font-family: "Roboto", sans-serif;
       border-radius: 10%;
       margin-right: 2rem; }
     .main .segundoCuerpo div a {
+      background-color: #f4f4f4;
+      color: black;
+      font-family: "Roboto", sans-serif;
+      text-decoration: none;
       padding: .625rem 1.25rem;
       border-style: solid;
       border-color: white;
-      border-width: 0.1563;
-      text-decoration: none;
-      font-family: "Roboto", sans-serif;
-      background-color: #f4f4f4;
-      color: black; }
-    .main .segundoCuerpo div .button {
-      position: absolute;
-      bottom: 10%;
-      display: inline-block;
-      padding: 2.5% 25%;
-      border-radius: 1.5625rem;
-      opacity: 0.75;
-      transition: opacity 0.3s;
-      margin-right: 2rem; }
-      .main .segundoCuerpo div .button:hover {
-        opacity: 1; }
+      border-width: 0.1563rem; }
+
+.main .inicioProductos .button {
+  position: absolute;
+  bottom: 10%;
+  display: inline-block;
+  padding: 2.5% 25%;
+  border-radius: 1.5625rem;
+  opacity: 0.75;
+  transition: opacity 0.3s;
+  margin-right: 2rem; }
+
+.main .inicioProductos .button:hover {
+  opacity: 1; }
 
 .productosPrincipal {
   position: relative;
@@ -1045,7 +1054,7 @@ Si son Mobile First van en orden creciente*/
     display: flex;
     align-items: center;
     max-width: 100%; }
-  .footerGlobal form label, .footerGlobal form input[type="email"], .footerGlobal form input[type="sumbit"],
+  .footerGlobal form label,
   .footerGlobal form input[type="email"],
   .footerGlobal form input[type="sumbit"] {
     margin-right: .625rem; }
@@ -1370,7 +1379,7 @@ Si son Mobile First van en orden creciente*/
     display: flex;
     align-items: center;
     max-width: 100%; }
-  .footerGlobal form label, .footerGlobal form input[type="email"], .footerGlobal form input[type="sumbit"],
+  .footerGlobal form label,
   .footerGlobal form input[type="email"],
   .footerGlobal form input[type="sumbit"] {
     margin-right: .625rem; }
@@ -1735,14 +1744,16 @@ Si son Mobile First van en orden creciente*/
     flex-direction: column;
     padding: 0.25rem;
     background-color: #BA9D79; }
-  .campoContacto1, .campoContacto2 {
+  .campoContacto1,
+  .campoContacto2 {
     flex: 1;
     padding: 1.25rem;
     border-radius: .9375rem;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     margin: .625rem;
     background-color: #E3CDAE; }
-  .campoContacto1 h4, .campoContacto2 h4 {
+  .campoContacto1 h4,
+  .campoContacto2 h4 {
     text-align: center;
     margin-bottom: 1.25rem;
     font-size: 1.25rem;
@@ -1832,7 +1843,7 @@ Si son Mobile First van en orden creciente*/
     align-items: center;
     max-width: 100%;
     font-size: x-small; }
-  .footerGlobal form label, .footerGlobal form input[type="email"], .footerGlobal form input[type="sumbit"],
+  .footerGlobal form label,
   .footerGlobal form input[type="email"],
   .footerGlobal form input[type="sumbit"] {
     margin-right: .625rem; }
@@ -2192,14 +2203,16 @@ Si son Mobile First van en orden creciente*/
     flex-direction: column;
     padding: 0.25rem;
     background-color: #BA9D79; }
-  .campoContacto1, .campoContacto2 {
+  .campoContacto1,
+  .campoContacto2 {
     flex: 1;
     padding: 1.25rem;
     border-radius: .9375rem;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     margin: .625rem;
     background-color: #E3CDAE; }
-  .campoContacto1 h4, .campoContacto2 h4 {
+  .campoContacto1 h4,
+  .campoContacto2 h4 {
     text-align: center;
     margin-bottom: 1.25rem;
     font-size: 1rem;
@@ -2292,7 +2305,7 @@ Si son Mobile First van en orden creciente*/
     max-width: 100%;
     font-size: .4375rem;
     font-weight: bold; }
-  .footerGlobal form label, .footerGlobal form input[type="email"], .footerGlobal form input[type="sumbit"],
+  .footerGlobal form label,
   .footerGlobal form input[type="email"],
   .footerGlobal form input[type="sumbit"] {
     margin-right: .625rem;

@@ -2,8 +2,8 @@
     @include flex(row, wrap, none, space-between, flex-start, none, none);
     padding: 1.25rem;
     background-color: $color-blanco-2;
-    color: $color-negro;
     font-family: $tipografia-a;
+    color: $color-negro;
     dl{
         margin-bottom: 1.25rem;
         dt{
@@ -11,10 +11,10 @@
             font-weight: bold;
         }
         dd{
-            margin: 0.3125rem;
+            margin: 0.3125rem 0;
             font-size: 0.75rem;
-            font-size: $tipografia-b;
-            color: $color-negro;
+            color: $color-gris;
+            font-family: $tipografia-b;
         }
     }
     div{
@@ -31,23 +31,24 @@
             margin-right: 0.625rem;
         }
     }
-    form{
-        display: flex;
-        align-items: center;
-        max-width: 100%;
-        label{
-            margin-right: 0.625rem;
-            font-size: 1rem;
-        }
-        input[type="email"]{
-            @extend label;
-            width: 100%;
-            height: 100%;
-        }
-        input[type="sumbit"]{
-            @extend label;
-            width: 3rem;
-            height: 3rem;
-        }
-    }
+}
+
+.footerGlobal form{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
+.footerGlobal form label,
+.footerGlobal form input[type="email"],
+.footerGlobal form input[type="sumbit"]{
+    margin-right: .625rem;
+    font-size: 1rem;
+}
+.footerGlobal form input[type="email"]{
+    width: 100%;
+    height: 100%;
+}
+.footerGlobal form input[type="sumbit"]{
+    width: 3rem;
+    height: 3rem;
 }

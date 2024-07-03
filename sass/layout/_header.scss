@@ -1,20 +1,20 @@
 .header{
-    @include flex(none, none, none, space-between, center, none, none)
+    @include flex(none, none, none, space-between, center, none, none);
     background-color: $color-gris;
-    color: $color-blanco;
     margin: 0;
+    color: $color-blanco;
     nav{
         @include flex(column, none, none, space-between, center, none, none);
+        background-color: $color-principal;
         padding: 0 0;
         width: 100%;
         margin: 0;
-        background-color: $color-principal;
         div{
             a{
                 margin-bottom: 1rem;
+                color: $color-blanco-2;
                 font-size: 1.5rem;
                 text-decoration: none;
-                color: $color-blanco-2;
             }
             img{
                 @include imagen-circulo(6.25rem, 6.25rem, 0.3125rem);
@@ -23,29 +23,29 @@
         }
         ul{
             @include flex(none, none, none, space-between, none, none, none);
-            width: 100%;
-            padding: 0.625rem;
             list-style: none;
-            text-decoration: none;
-            font-family: $tipografia-a;
             background-color: $color-blanco;
             color: $color-negro;
+            font-family: $tipografia-a;
+            text-decoration: none;
+            width: 100%;
+            padding: 0.625rem;
             li{
                 flex: 1;
                 text-align: center;
                 a{
                     display: block;
+                    color: $color-gris-t;
                     text-decoration: none;
                     font-size: 1rem;
                     padding: 0.75rem 1.5rem;
+                    background-color: $color-blanco;
                     border: 2px solid white;
                     border-radius: 1.25rem;
-                    border-width: 0.2031rem;
-                    padding: 0.3125rem;
+                    border-width: .2031rem;
+                    padding: .3125rem;
                     max-width: 15rem;
                     margin: 0 auto;
-                    background-color: $color-blanco;
-                    color: $color-gris-t;
                     border-color: $color-gris;
                     transition: background-color 0.3s, border-color 0.3, color 0.3s;
                     &:hover{
@@ -56,10 +56,11 @@
                 }
             }
         }
-        .navbar .active{
-            background-color: $color-blanco;
-            border-color: $color-negro;
-            color: $color-negro;
-        }
     }
+}
+
+.navbar .active{
+    background-color: white;
+    border-color: black;
+    color: black;
 }
