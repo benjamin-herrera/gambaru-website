@@ -215,10 +215,10 @@ font-family: "Roboto", sans-serif;
   row-gap: none;
   gap: 1.25rem; }
   .main .segundoCuerpo p {
-    margin: 2.1875rem;
-    font-size: 1.15rem;
+    margin: 2rem;
+    font-size: 1.25rem;
     line-height: 1.15;
-    max-height: 85%;
+    max-height: 100%;
     overflow-y: auto;
     margin-left: 6.25rem; }
   .main .segundoCuerpo div {
@@ -245,20 +245,17 @@ font-family: "Roboto", sans-serif;
       padding: .625rem 1.25rem;
       border-style: solid;
       border-color: white;
-      border-width: 0.1563rem; }
-
-.main .inicioProductos .button {
-  position: absolute;
-  bottom: 10%;
-  display: inline-block;
-  padding: 2.5% 25%;
-  border-radius: 1.5625rem;
-  opacity: 0.75;
-  transition: opacity 0.3s;
-  margin-right: 2rem; }
-
-.main .inicioProductos .button:hover {
-  opacity: 1; }
+      border-width: 0.1563rem;
+      position: absolute;
+      bottom: 10%;
+      display: inline-block;
+      padding: 2.5% 25%;
+      border-radius: 1.5625rem;
+      opacity: 0.75;
+      transition: opacity 0.3s;
+      margin-right: 2rem; }
+      .main .segundoCuerpo div a:hover {
+        opacity: 1; }
 
 .productosPrincipal {
   position: relative;
@@ -540,29 +537,31 @@ font-family: "Roboto", sans-serif;
       text-align: center;
       margin-bottom: 1.25rem;
       font-size: 1.5rem; }
-    .contenedor div div div {
-      background-color: #BA9D79;
-      padding: 1.25rem;
-      border-radius: .9375rem; }
-      .contenedor div div div ul {
-        list-style: none;
-        font-family: "Roboto", sans-serif;
-        background-color: #f4f4f4;
-        color: black;
-        list-style: none;
-        padding: .3125rem;
+    .contenedor div div {
+      background-color: #BA9D79; }
+      .contenedor div div div {
+        background-color: #E3CDAE;
+        padding: 1.25rem;
         border-radius: .9375rem; }
-        .contenedor div div div ul li {
-          margin-bottom: 0.625rem; }
-      .contenedor div div div form {
-        font-family: "Roboto", sans-serif;
-        color: black;
-        display: flex;
-        flex-wrap: wrap;
-        gap: .625rem;
-        padding: .625rem; }
-        .contenedor div div div form input {
-          background-color: #f4f4f4; }
+        .contenedor div div div ul {
+          list-style: none;
+          font-family: "Roboto", sans-serif;
+          background-color: #f4f4f4;
+          color: black;
+          list-style: none;
+          padding: .3125rem;
+          border-radius: .9375rem; }
+          .contenedor div div div ul li {
+            margin-bottom: 0.625rem; }
+        .contenedor div div div form {
+          font-family: "Roboto", sans-serif;
+          color: black;
+          display: flex;
+          flex-wrap: wrap;
+          gap: .625rem;
+          padding: .625rem; }
+          .contenedor div div div form input {
+            background-color: #f4f4f4; }
   .contenedor div {
     background-color: #E3CDAE;
     flex: 1;
@@ -601,9 +600,9 @@ font-family: "Roboto", sans-serif;
 
 iframe {
   width: 100%;
-  height: 39.0625rem;
+  height: 40rem;
   border: none;
-  border-radius: .9375rem; }
+  border-radius: 1rem; }
 
 /*Cuarto llamar a los componentes*/
 /*Ultimo llamar a los Mediaquerry

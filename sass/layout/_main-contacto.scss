@@ -18,8 +18,9 @@
             font-size: 1.5rem;
         }
         div{
+            background-color: $color-secundario;
             div{
-                background-color: $color-secundario;
+                background-color: $color-principal;
                 padding: 1.25rem;
                 border-radius: .9375rem;
                 ul{
@@ -91,7 +92,7 @@
 
 iframe{
     width: 100%;
-    height: 39.0625rem;
+    height: 40rem;
     border: none;
-    border-radius: .9375rem;
+    border-radius: 1rem;
 }
